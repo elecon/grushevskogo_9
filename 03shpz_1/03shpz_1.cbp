@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SHPZ_3_6_9_14" />
+		<Option makefile_is_custom="1" />
+		<Option execution_dir="Src" />
+		<Option pch_mode="2" />
+		<Option compiler="avrgcc" />
+		<Build>
+			<Target title="all">
+				<Option output="bin\Release\TEST" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="winavr20100110gcc433" />
+				<Compiler>
+					<Add option="-Os" />
+				</Compiler>
+				<MakeCommands>
+					<Build command="make all" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="make clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -s -f $makefile $target" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="..\Devs\Dev_kog_t.cpp" />
+		<Unit filename="..\Devs\Dev_kog_t.h" />
+		<Unit filename="..\Devs\Dev_zov_t.cpp" />
+		<Unit filename="..\Devs\Dev_zov_t.h" />
+		<Unit filename="Src\DEVS.H" />
+		<Unit filename="Src\Dev_KD.cpp" />
+		<Unit filename="Src\Dev_KD.h" />
+		<Unit filename="Src\Dev_VZK.cpp" />
+		<Unit filename="Src\Dev_VZK.h" />
+		<Unit filename="Src\Dev_kog.cpp" />
+		<Unit filename="Src\Dev_kog.h" />
+		<Unit filename="Src\Devs.cpp" />
+		<Unit filename="Src\Etaz.cpp" />
+		<Unit filename="Src\Etaz.h" />
+		<Unit filename="Src\Main.h" />
+		<Unit filename="Src\Makefile" />
+		<Unit filename="Src\Menu.cpp" />
+		<Unit filename="Src\Menu.h" />
+		<Unit filename="Src\Net.h" />
+		<Unit filename="Src\Nls.h" />
+		<Unit filename="Src\Pdz.cpp" />
+		<Unit filename="Src\Pdz.h" />
+		<Unit filename="Src\Segm_485.cpp" />
+		<Unit filename="Src\Segm_485.h" />
+		<Unit filename="Src\Sgwork.cpp" />
+		<Unit filename="Src\Sgwork.h" />
+		<Unit filename="Src\TechObj.cpp" />
+		<Unit filename="Src\TechObj.h" />
+		<Unit filename="Src\Test.cpp" />
+		<Unit filename="Src\Test.h" />
+		<Unit filename="Src\Version.bat" />
+		<Unit filename="Src\avr-mem.sh" />
+		<Unit filename="Src\main.cpp" />
+		<Unit filename="Src\scmRTOS_config.h" />
+		<Unit filename="Src\versionTemplate.h" />
+		<Unit filename="..\devs\Dev_moe.cpp" />
+		<Unit filename="..\devs\Dev_moe.h" />
+		<Unit filename="..\netstruct.h" />
+		<Unit filename="..\scmRTOS\Common\OS_Kernel.cpp" />
+		<Unit filename="..\scmRTOS\Common\OS_Services.cpp" />
+		<Unit filename="..\scmRTOS\Common\scmRTOS.h" />
+		<Unit filename="..\scmRTOS\Common\scmRTOS_defs.h" />
+		<Unit filename="..\scmRTOS\Lib\AVR-GCC\COMMDEFS.H" />
+		<Unit filename="..\scmRTOS\Lib\AVR-GCC\USRLIB.H" />
+		<Unit filename="..\scmRTOS\Lib\AVR-GCC\Usrlib.cpp" />
+		<Unit filename="..\scmRTOS\Target\AVR-GCC\Iic.cpp" />
+		<Unit filename="..\scmRTOS\Target\AVR-GCC\Iic.h" />
+		<Unit filename="..\scmRTOS\Target\AVR-GCC\OS_Target.h" />
+		<Unit filename="..\scmRTOS\Target\AVR-GCC\OS_Target_asm.S" />
+		<Unit filename="..\scmRTOS\Target\AVR-GCC\OS_Target_cpp.cpp" />
+		<Unit filename="..\scmRTOS\Target\AVR-GCC\Peripheral.cpp" />
+		<Unit filename="..\scmRTOS\Target\AVR-GCC\Peripheral.h" />
+		<Unit filename="..\scmRTOS\Target\AVR-GCC\Uart.cpp" />
+		<Unit filename="..\scmRTOS\Target\AVR-GCC\Uart.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<AutoVersioning>
+				<Scheme minor_max="10" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
+				<Settings autoincrement="1" date_declarations="1" update_manifest="0" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
+				<Changes_Log show_changes_editor="0" app_title="released version %M.%m.%b of %p" changeslog_path="ChangesLog.txt" />
+				<Code header_guard="VERSION_H" namespace="AutoVersion" prefix="" />
+			</AutoVersioning>
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

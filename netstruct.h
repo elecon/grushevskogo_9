@@ -1,11 +1,4 @@
-/*
-$Author$
-$Date$
-$Tag$
-$IdShort$
-$Id$
-$IdInfo$
-*/
+
 
 #ifndef __NET_STRUCT_H
 	#define __NET_STRUCT_H

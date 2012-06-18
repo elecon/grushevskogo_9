@@ -71,6 +71,7 @@ VERSEP = ___
 #smhm := $(TARGET)$(VERSEP)$(SHELL_HG_TEMPLATE)$(VERSEP)$(SHELL_HG_IDENTIFY)
 SHELL_IDENTIFY := $(shell git show -s --format="%H")
 SHELL_TEMPLATE := $(shell sh ../../version_gen.sh )
+smhm := $(TARGET)$(VERSEP)$(SHELL_TEMPLATE)$(VERSEP)$(SHELL_IDENTIFY)
 # Place -D or -U options here
 CDEFS = -DF_CPU=$(F_CPU)UL
 CDEFS += -D IDENTIFY="\"$(SHELL_IDENTIFY)\""

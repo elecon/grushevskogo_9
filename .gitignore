@@ -1,0 +1,12 @@
+*.o
+*.lst
+*.sym
+*.hex
+*.eep
+*.lss
+*.map
+*.elf
+version.h
+*.layout
+*.patch
+*.d

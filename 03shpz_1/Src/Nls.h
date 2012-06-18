@@ -28,7 +28,7 @@
 //																   пристрої
 //-------------------------------------------------------------------------
 //	#define mZ_21		        LED_FIELD[78]
-#if SHPZ_3
+#if s03shpz_1
     #define mVZK_1_1	        LED_FIELD[24]
     #define mVZK_1_2	        LED_FIELD[25]
     #define mVZK_1_3	        LED_FIELD[26]

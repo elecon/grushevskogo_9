@@ -73,7 +73,7 @@ extern uint8_t OS_MT[2];
 extern const prog_char glob_menu_str[7][16] PROGMEM;
 const prog_char glob_menu_str[7][16]=
 {
-#if SHPZ_3
+#if s03shpz_1
 	"1.SHPZ-3",
 #endif
 #if SHPZ_6

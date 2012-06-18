@@ -34,7 +34,7 @@ uint8_t LampMirg;
 
 extern SysTime time;
 
-#if SHPZ_3
+#if s03shpz_1
 uint8_t* VZK_arr[][3]=
 {
     (uint8_t*)&mVZK_1_1,           (uint8_t*)&kVZK_1_1,           (uint8_t*)&OP_VZK_GR1,

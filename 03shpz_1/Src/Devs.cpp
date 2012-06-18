@@ -17,7 +17,7 @@ extern const prog_char dev_name_str_moe[] PROGMEM;
 const prog_char dev_name_str_moe[] = "GR1";
 //typedef prog_char1 {prog_char PROGMEM} prog_char2;
 
-#if SHPZ_3
+#if s03shpz_1
 const prog_char strKPD11[]="йод21";
 const prog_char strKPD12[]="йод22";
 const prog_char strKPD21[]="йод31";

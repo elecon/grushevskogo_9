@@ -15,13 +15,13 @@ FORMAT = ihex
 
 
 # Target file name (without extension).
-SCAFE_NAME = SHPZ_3
+SCAFE_NAME = s03shpz_1
 #SCAFE_NAME = SHPZ_6
 #SCAFE_NAME = SHPZ_9
 #SCAFE_NAME = SHPZ_14
 
-ifeq ($(SCAFE_NAME),SHPZ_3)
-	TARGET = SHPZ_3
+ifeq ($(SCAFE_NAME),s03shpz_1)
+	TARGET = s03shpz_1
 	SCAFE_ADRESS = 0x57
 endif
 ifeq ($(SCAFE_NAME),SHPZ_6)
@@ -84,8 +84,8 @@ CDEFS += -D scmRTOS_SYSTIMER_NEST_INTS_ENABLE
 
 CPPDEFS = -D SCAFE_NAME=$(SCAFE_NAME)
 CPPDEFS += -D SCAFE_ADRESS=$(SCAFE_ADRESS)
-ifeq ($(SCAFE_NAME),SHPZ_3)
-CPPDEFS += -DSHPZ_3
+ifeq ($(SCAFE_NAME),s03shpz_1)
+CPPDEFS += -Ds03shpz_1
 endif
 ifeq ($(SCAFE_NAME),SHPZ_6)
 CPPDEFS += -DSHPZ_6

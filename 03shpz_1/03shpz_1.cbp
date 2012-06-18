@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="SHPZ_3_6_9_14" />
+		<Option title="s03shpz_1" />
 		<Option makefile_is_custom="1" />
 		<Option execution_dir="Src" />
 		<Option pch_mode="2" />

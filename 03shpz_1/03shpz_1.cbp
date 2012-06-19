@@ -60,10 +60,14 @@
 		<Unit filename="Src/main.cpp" />
 		<Unit filename="Src/scmRTOS_config.h" />
 		<Unit filename="Src/versionTemplate.h" />
+		<Unit filename="../Devs/Dev_kog.cpp" />
+		<Unit filename="../Devs/Dev_kog.h" />
 		<Unit filename="../Devs/Dev_kog_t.cpp" />
 		<Unit filename="../Devs/Dev_kog_t.h" />
 		<Unit filename="../Devs/Dev_moe.cpp" />
 		<Unit filename="../Devs/Dev_moe.h" />
+		<Unit filename="../Devs/Dev_zov.cpp" />
+		<Unit filename="../Devs/Dev_zov.h" />
 		<Unit filename="../Devs/Dev_zov_t.cpp" />
 		<Unit filename="../Devs/Dev_zov_t.h" />
 		<Unit filename="../netstruct.h" />

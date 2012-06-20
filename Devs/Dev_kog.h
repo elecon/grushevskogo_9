@@ -1,22 +1,18 @@
-#ifndef __DEVKOGT_H
-	#define __DEVKOGT_H
-
-//    #define TAMPLE
+#ifndef __DEVKOG_H
+	#define __DEVKOG_H
 
 	#include "DEVS.H"
     #include "Nls.h"
 
-	enum {KOGT_C_CLOSE,KOGT_C_OPEN};
-	enum {  KOGT_ST_CLOSE,   //0x01
-            KOGT_ST_OPEN,    //0x02
-            KOGT_ST_OPER,    //0x04
-            KOGT_ST_DIST,    //0x08
-            KOGT_ST_AVTO,    //0x10
+	enum {KOG_C_CLOSE,KOG_C_OPEN};
+	enum {  KOG_ST_CLOSE,   //0x01
+            KOG_ST_OPEN,    //0x02
+            KOG_ST_OPER,    //0x04
+            KOG_ST_DIST,    //0x08
 
-            KOGT_ST_ERR      //0x20
+            KOG_ST_AVTO,    //0x10
+            KOG_ST_ERR      //0x20
     };
-
-	//extern XZ moe;
 
     extern uint8_t LED_FIELD[NUM_OF_MNEMO*80];
 
@@ -40,9 +36,6 @@
 	class KOGT: public TDevObject
 	{
         public:
-            //uint8_t stan;
-            //uint8_t
-
             uint8_t t_repit_counter;
             uint8_t t_kog_wait;
 

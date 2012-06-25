@@ -49,7 +49,7 @@
 	}
 	void KOG::check_os()
 	{
-		if(*os) enh_info|=KOG_OS_ERROR;
+		if(!(*os)) enh_info|=KOG_OS_ERROR;
 		else enh_info&=~KOG_OS_ERROR;
 	}
 
@@ -144,18 +144,18 @@
 		if(stad==KOG_ST_CLOSE) LCD_abc((char*)stad_str[1],6);
 		//LCD_uind(read_t_stad(),7,5);
 
-//		if(enh_info&KOG_DIST) LCD_abc((char*)dist_str,12);
-//		else if(enh_info&KOG_OPER) LCD_abc((char*)oper_str,12);
-//		else LCD_abc((char*)auto_str,12);
-//
-//		if(enh_info&(KOG_PRESS_ERROR|KOG_MP_ERROR|KOG_KTR_ERROR|KOG_OS_ERROR))
-//			LCD_abc((char*)error_str,20);//16
-//		if(enh_info&KOG_PRESS_ERROR) LCD_abc((char*)press_err_str,23);//19
-//		if(enh_info&KOG_MP_ERROR) LCD_abc((char*)mp_err_str,27);//23
-//		if(enh_info&KOG_KTR_ERROR) LCD_abc((char*)ktr_err_str,30);//26
-//		if(enh_info&KOG_OS_ERROR) LCD_abc((char*)os_err_str,34);//30
-//
-//		if(KEY_1) enh_info&=~(KOG_PRESS_ERROR|KOG_MP_ERROR|KOG_KTR_ERROR|KOG_OS_ERROR);
+		if(enh_info&KOG_DIST) LCD_abc((char*)dist_str,12);
+		else if(enh_info&KOG_OPER) LCD_abc((char*)oper_str,12);
+		else LCD_abc((char*)auto_str,12);
+
+		if(enh_info&(KOG_PRESS_ERROR|KOG_MP_ERROR|KOG_KTR_ERROR|KOG_OS_ERROR))
+			LCD_abc((char*)error_str,20);//16
+		if(enh_info&KOG_PRESS_ERROR) LCD_abc((char*)press_err_str,23);//19
+		if(enh_info&KOG_MP_ERROR) LCD_abc((char*)mp_err_str,27);//23
+		if(enh_info&KOG_KTR_ERROR) LCD_abc((char*)ktr_err_str,30);//26
+		if(enh_info&KOG_OS_ERROR) LCD_abc((char*)os_err_str,34);//30
+
+		if(KEY_1) enh_info&=~(KOG_PRESS_ERROR|KOG_MP_ERROR|KOG_KTR_ERROR|KOG_OS_ERROR);
 	}
 
 	KOG::KOG(	const prog_char* _name,

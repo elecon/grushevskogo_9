@@ -223,14 +223,14 @@ uint8_t* VZK_arr[][3]=
 void all_ind()
 {
 	if (!sec_tik) mReady^=0xf0;//лампочка "Готов"
-    for (i=0;i<(35);i++) {
-		if (*VZK_arr[i][2]) {
-            if (*VZK_arr[i][1]) *VZK_arr[i][0]=red_lamp; else *VZK_arr[i][0]=red_b_lamp;
-		}
-		else {
-            if (*VZK_arr[i][1]) *VZK_arr[i][0]=green_b_lamp; else *VZK_arr[i][0]=green_lamp;
-		}
-	}
+//    for (i=0;i<(35);i++) {
+//		if (*VZK_arr[i][2]) {
+//            if (*VZK_arr[i][1]) *VZK_arr[i][0]=red_lamp; else *VZK_arr[i][0]=red_b_lamp;
+//		}
+//		else {
+//            if (*VZK_arr[i][1]) *VZK_arr[i][0]=green_b_lamp; else *VZK_arr[i][0]=green_lamp;
+//		}
+//	}
 
     if (((kKNOP_FLOORE_1__1)&&(kKNOP_FLOORE_1__2))) {
             mFIRE_KNOP_1=red_lamp;

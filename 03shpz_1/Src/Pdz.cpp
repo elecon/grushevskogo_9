@@ -157,25 +157,25 @@ uint16_t fire_zone;
 #include "../../Devs/Dev_zov_t.h"
 #include "../../Devs/Dev_moe.h"
 //extern ZOVT<LED_NOMER, MSK_BIT,OUT_BIT,OPTIONS,STRING> ZOV18;
-extern MOE <12+80*0,24+32*1,    0,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD11> KPD11;
-extern MOE < 4+80*0,25+32*1,    1,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD12> KPD12;
-extern MOE <50+80*0,26+32*1,    2,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD21> KPD21;
-extern MOE <42+80*0,27+32*1,    3,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD22> KPD22;
-extern MOE <55+80*0,28+32*1,    4,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD31> KPD31;
-extern MOE <47+80*0,29+32*1,    5,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD32> KPD32;
-
-extern KOGT <19+80*0,13+32*0,  12,             OPT_CHECK_PRESS|OPT_CHECK_OS,   strPP1> PP1;
-extern KOGT <57+80*0,14+32*0,  13,             OPT_CHECK_PRESS|OPT_CHECK_OS,   strPP2> PP2;
-extern KOGT <62+80*0,15+32*0,  14,             OPT_CHECK_PRESS|OPT_CHECK_OS,   strPP3> PP3;
-
-extern ZOVT <27+80*0,5+32*1,   9, 0,                                           strZOV1> ZOV1;
-extern ZOVT <65+80*0,5+32*1,   10, 0,                                          strZOV2> ZOV2;
-extern ZOVT <70+80*0,5+32*1,   11, 0,                                          strZOV3> ZOV3;
-//ZOVT <73+80*0,5+32*1,   11, 0,                                          strDVR> DVR;
-
-extern KOGT <32+80*0,5+32*1,   6,                               OPT_CHECK_OS,  strVZK1> VZK1;
-extern KOGT <32+80*0,5+32*1,   7,                               OPT_CHECK_OS,  strVZK2> VZK2;
-extern KOGT <32+80*0,5+32*1,   8,                               OPT_CHECK_OS,  strVZK3> VZK3;
+//extern MOE <12+80*0,24+32*1,    0,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD11> KPD11;
+//extern MOE < 4+80*0,25+32*1,    1,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD12> KPD12;
+//extern MOE <50+80*0,26+32*1,    2,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD21> KPD21;
+//extern MOE <42+80*0,27+32*1,    3,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD22> KPD22;
+//extern MOE <55+80*0,28+32*1,    4,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD31> KPD31;
+//extern MOE <47+80*0,29+32*1,    5,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD32> KPD32;
+//
+//extern KOGT <19+80*0,13+32*0,  12,             OPT_CHECK_PRESS|OPT_CHECK_OS,   strPP1> PP1;
+//extern KOGT <57+80*0,14+32*0,  13,             OPT_CHECK_PRESS|OPT_CHECK_OS,   strPP2> PP2;
+//extern KOGT <62+80*0,15+32*0,  14,             OPT_CHECK_PRESS|OPT_CHECK_OS,   strPP3> PP3;
+//
+//extern ZOVT <27+80*0,5+32*1,   9, 0,                                           strZOV1> ZOV1;
+//extern ZOVT <65+80*0,5+32*1,   10, 0,                                          strZOV2> ZOV2;
+//extern ZOVT <70+80*0,5+32*1,   11, 0,                                          strZOV3> ZOV3;
+////ZOVT <73+80*0,5+32*1,   11, 0,                                          strDVR> DVR;
+//
+//extern KOGT <32+80*0,5+32*1,   6,                               OPT_CHECK_OS,  strVZK1> VZK1;
+//extern KOGT <32+80*0,5+32*1,   7,                               OPT_CHECK_OS,  strVZK2> VZK2;
+//extern KOGT <32+80*0,5+32*1,   8,                               OPT_CHECK_OS,  strVZK3> VZK3;
 
 
 void Pdz1_stop()
@@ -183,61 +183,61 @@ void Pdz1_stop()
 	switch(Pdz1.sub_st)
 	{
 		case 0://останов вентилятора
-            ZOV1.auto_close();
-            ZOV2.auto_close();
-            ZOV3.auto_close();
+//            ZOV1.auto_close();
+//            ZOV2.auto_close();
+//            ZOV3.auto_close();
 			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
 				Pdz1.to_stad(PDZ_ST_STOP,1);
 		break;
 		case 1://останов вентилятора
-			VZK1.auto_close();
-			VZK2.auto_close();
-			VZK3.auto_close();
+//			VZK1.auto_close();
+//			VZK2.auto_close();
+//			VZK3.auto_close();
 			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
 				Pdz1.to_stad(PDZ_ST_STOP,2);
 		break;
 		case 2://останов вентилятора
-			PP1.auto_close();
+//			PP1.auto_close();
 			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
 				Pdz1.to_stad(PDZ_ST_STOP,3);
 		break;
 		case 3://останов вентилятора
-			PP2.auto_close();
+//			PP2.auto_close();
 			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
 				Pdz1.to_stad(PDZ_ST_STOP,4);
 		break;
 		case 4://останов вентилятора
-			PP3.auto_close();
+//			PP3.auto_close();
 			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
 				Pdz1.to_stad(PDZ_ST_STOP,5);
 		break;
 		case 5://останов вентилятора
-			KPD11.auto_close();
+//			KPD11.auto_close();
 			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
 				Pdz1.to_stad(PDZ_ST_STOP,6);
 		break;
 		case 6://останов вентилятора
-			KPD12.auto_close();
+//			KPD12.auto_close();
 			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
 				Pdz1.to_stad(PDZ_ST_STOP,7);
 		break;
 		case 7://останов вентилятора
-			KPD21.auto_close();
+//			KPD21.auto_close();
 			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
 				Pdz1.to_stad(PDZ_ST_STOP,8);
 		break;
 		case 8://останов вентилятора
-			KPD22.auto_close();
+//			KPD22.auto_close();
 			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
 				Pdz1.to_stad(PDZ_ST_STOP,9);
 		break;
 		case 9://останов вентилятора
-			KPD31.auto_close();
+//			KPD31.auto_close();
 			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
 				Pdz1.to_stad(PDZ_ST_STOP,10);
 		break;
 		case 10://останов вентилятора
-			KPD32.auto_close();
+//			KPD32.auto_close();
 			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
 				Pdz1.to_stad(PDZ_ST_STOP,11);
 		break;
@@ -251,51 +251,51 @@ void Pdz1_work()
 	switch(Pdz1.sub_st)
 	{
 		case 0:
-            ZOV1.auto_open();
-            ZOV2.auto_open();
-            ZOV3.auto_open();
+//            ZOV1.auto_open();
+//            ZOV2.auto_open();
+//            ZOV3.auto_open();
 			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,1);
 		break;
 		case 1:
-			VZK1.auto_open();
-			VZK2.auto_open();
-			VZK3.auto_open();
+//			VZK1.auto_open();
+//			VZK2.auto_open();
+//			VZK3.auto_open();
 			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,2);
 		break;
 		case 2:
-			PP1.auto_open();
+//			PP1.auto_open();
 			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,3);
 		break;
 		case 3:
-			PP2.auto_open();
+//			PP2.auto_open();
 			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,4);
 		break;
 		case 4:
-			PP3.auto_open();
+//			PP3.auto_open();
 			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,5);
 		break;
 		case 5:
-			if (fire_fl&(FIRE_FL_S_PK1_RAZ|FIRE_FL_S_SPS1)) KPD11.auto_open();
+//			if (fire_fl&(FIRE_FL_S_PK1_RAZ|FIRE_FL_S_SPS1)) KPD11.auto_open();
 			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,6);
 		break;
 		case 6:
-			if (fire_fl&(FIRE_FL_S_PK1_RAZ|FIRE_FL_S_SPS1)) KPD12.auto_open();
+//			if (fire_fl&(FIRE_FL_S_PK1_RAZ|FIRE_FL_S_SPS1)) KPD12.auto_open();
 			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,7);
 		break;
 		case 7:
-			if (fire_fl&(FIRE_FL_S_PK2_RAZ|FIRE_FL_S_SPS2)) KPD21.auto_open();
+//			if (fire_fl&(FIRE_FL_S_PK2_RAZ|FIRE_FL_S_SPS2)) KPD21.auto_open();
 			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,8);
 		break;
 		case 8:
-			if (fire_fl&(FIRE_FL_S_PK2_RAZ|FIRE_FL_S_SPS2)) KPD22.auto_open();
+//			if (fire_fl&(FIRE_FL_S_PK2_RAZ|FIRE_FL_S_SPS2)) KPD22.auto_open();
 			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,9);
 		break;
 		case 9:
-			if (fire_fl&(FIRE_FL_S_PK3_RAZ|FIRE_FL_S_SPS3)) KPD31.auto_open();
+//			if (fire_fl&(FIRE_FL_S_PK3_RAZ|FIRE_FL_S_SPS3)) KPD31.auto_open();
 			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,10);
 		break;
 		case 10:
-			if (fire_fl&(FIRE_FL_S_PK3_RAZ|FIRE_FL_S_SPS3)) KPD32.auto_open();
+//			if (fire_fl&(FIRE_FL_S_PK3_RAZ|FIRE_FL_S_SPS3)) KPD32.auto_open();
 			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,11);
 		break;
 		case 11:

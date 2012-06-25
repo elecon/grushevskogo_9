@@ -1,12 +1,13 @@
 #include "../../Devs/Dev_kog_t.h"
 #include "../../Devs/Dev_zov_t.h"
 #include "../../Devs/Dev_moe.h"
+#include "../../Devs/Dev_kog.h"
 #include "Dev_KD.h"
 //#include "Dev_VZK.h"
 #include <avr/delay.h>
 #include "Nls.h"
 
-#define NUM_OF_DEVS 15
+#define NUM_OF_DEVS 1
 
 extern NET_OUTPUT_STRUCT1 data_from_slave1;
 extern NET_INPUT_STRUCT1 data_for_slave1;
@@ -92,67 +93,61 @@ const prog_char strVZK3[]="ВЗК15";
 
 //template <uint16_t LED_NOMER, uint8_t MSK_BIT,uint8_t OUT_BIT,uint16_t OPTIONS,const char *STRING>
 //    led     msk       out                     options                 str
-MOE <12+80*0,24+32*1,    0,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD11> KPD11;
-MOE < 4+80*0,25+32*1,    1,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD12> KPD12;
-MOE <50+80*0,26+32*1,    2,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD21> KPD21;
-MOE <42+80*0,27+32*1,    3,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD22> KPD22;
-MOE <55+80*0,28+32*1,    4,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD31> KPD31;
-MOE <47+80*0,29+32*1,    5,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD32> KPD32;
-
-KOGT <19+80*0,13+32*0,  12,             OPT_CHECK_MP|OPT_CHECK_OS,   strPP1> PP1;
-KOGT <57+80*0,14+32*0,  13,             OPT_CHECK_MP|OPT_CHECK_OS,   strPP2> PP2;
-KOGT <62+80*0,15+32*0,  14,             OPT_CHECK_MP|OPT_CHECK_OS,   strPP3> PP3;
-
-ZOVT <27+80*0,5+32*1,   9, 0,                                           strZOV1> ZOV1;
-ZOVT <65+80*0,5+32*1,   10, 0,                                          strZOV2> ZOV2;
-ZOVT <70+80*0,5+32*1,   11, 0,                                          strZOV3> ZOV3;
-//ZOVT <73+80*0,5+32*1,   11, 0,                                          strDVR> DVR;
-
-KOGT <32+80*0,5+32*1,   6,                               OPT_CHECK_OS,  strVZK1> VZK1;
-KOGT <32+80*0,5+32*1,   7,                               OPT_CHECK_OS,  strVZK2> VZK2;
-KOGT <32+80*0,5+32*1,   8,                               OPT_CHECK_OS,  strVZK3> VZK3;
+//MOE <12+80*0,24+32*1,    0,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD11> KPD11;
+//MOE < 4+80*0,25+32*1,    1,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD12> KPD12;
+//MOE <50+80*0,26+32*1,    2,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD21> KPD21;
+//MOE <42+80*0,27+32*1,    3,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD22> KPD22;
+//MOE <55+80*0,28+32*1,    4,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD31> KPD31;
+//MOE <47+80*0,29+32*1,    5,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD32> KPD32;
+//
+//KOGT <19+80*0,13+32*0,  12,             OPT_CHECK_MP|OPT_CHECK_OS,   strPP1> PP1;
+//KOGT <57+80*0,14+32*0,  13,             OPT_CHECK_MP|OPT_CHECK_OS,   strPP2> PP2;
+//KOGT <62+80*0,15+32*0,  14,             OPT_CHECK_MP|OPT_CHECK_OS,   strPP3> PP3;
+//
+//ZOVT <27+80*0,5+32*1,   9, 0,                                           strZOV1> ZOV1;
+//ZOVT <65+80*0,5+32*1,   10, 0,                                          strZOV2> ZOV2;
+//ZOVT <70+80*0,5+32*1,   11, 0,                                          strZOV3> ZOV3;
+////ZOVT <73+80*0,5+32*1,   11, 0,                                          strDVR> DVR;
+//
+//KOGT <32+80*0,5+32*1,   6,                               OPT_CHECK_OS,  strVZK1> VZK1;
+//KOGT <32+80*0,5+32*1,   7,                               OPT_CHECK_OS,  strVZK2> VZK2;
+//KOGT <32+80*0,5+32*1,   8,                               OPT_CHECK_OS,  strVZK3> VZK3;
 
 extern uint8_t scafe_net;
 
 
 //KOG( *name, *mn_os, enh_info,	*out, *press, *os, *mp, *ktr)
+////-------------------------------------------------------------------------------------------YA6
+//VZK GR3						//клас місцевих пристроїв
+//	(dev_name_str[0],		//назва яка буде відображитися на LCD
+//	(uint8_t*)&mGR1,		//свытлодіод мнемосхеми
+//	VZK_CHECK_OS,			//статус
+//	&OP_GR1,                //вихід МТ
+//	0,						//контроль стану перепаду тиску
+//	0,				        //контроль стану зворотній зв'язок
+//	0,						//контроль стану магнітного пускача
+//	0);						//контроль стану теплового реле
+
 //-------------------------------------------------------------------------------------------YA6
-VZK GR3						//клас місцевих пристроїв
+KOG KK1						//клас місцевих пристроїв
 	(dev_name_str[0],		//назва яка буде відображитися на LCD
 	(uint8_t*)&mGR1,		//свытлодіод мнемосхеми
-	VZK_CHECK_OS,			//статус
+	KOG_CHECK_OS,			//статус
 	&OP_GR1,                //вихід МТ
 	0,						//контроль стану перепаду тиску
-	0,				        //контроль стану зворотній зв'язок
+	&OS_GR1,				//контроль стану зворотній зв'язок
 	0,						//контроль стану магнітного пускача
 	0);						//контроль стану теплового реле
 
 
-TDevObject* pDevs_arr[NUM_OF_DEVS]=
+TDevObject* pDevs_arr[]=
 {
-	&KPD11,
-	&KPD12,
-	&PP1,
-	&ZOV1,
-	&VZK1,
-
-	&KPD21,
-	&KPD22,
-	&PP2,
-	&ZOV2,
-	&VZK2,
-
-	&KPD31,
-	&KPD32,
-	&PP3,
-	&ZOV3,
-	&VZK3,
+	&KK1,
 };
 //extern const prog_char dev_name_str[][5] PROGMEM;
 const prog_char dev_name_str[][5]=
 {
 	"Гр1",
-	"Гр22",
 };
 
 

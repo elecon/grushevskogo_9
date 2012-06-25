@@ -27,6 +27,11 @@
 			uint8_t *os;//указатель на байт обратной связи
 			uint8_t *k_mp;
 			uint8_t *k_ktr;
+			uint16_t enh_info;
+			uint8_t *mn_os;
+			int8_t s_n;
+			uint8_t cmd;
+			const prog_char *name;
 			uint16_t t_wait_press;
 			uint16_t t_wait_press_counter;
 			uint16_t t_wait_mp;

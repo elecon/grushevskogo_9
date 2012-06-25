@@ -55,7 +55,7 @@
 
 	void KOG::drv()
 	{
-		if(!sec_tik) inc_t_stad();
+//		if(!sec_tik) inc_t_stad();
 //		if(enh_info&(KOG_PRESS_ERROR|KOG_MP_ERROR|KOG_KTR_ERROR|KOG_OS_ERROR))
 //			cmd=KOG_C_CLOSE;
 		switch(cmd)
@@ -64,14 +64,14 @@
 				if(stad!=KOG_ST_OPEN)
 				{
 					stad=KOG_ST_OPEN;
-					clear_t_stad();
+					//clear_t_stad();
 				}
 			break;
 			case KOG_C_CLOSE:
 				if(stad!=KOG_ST_CLOSE)
 				{
 					stad=KOG_ST_CLOSE;
-					clear_t_stad();
+//					clear_t_stad();
 				}
 			break;
 		}
@@ -94,8 +94,8 @@
 
 	KOG::KOG()
 	{
-		clear_t_stad();
-		clear_t_sub_st();
+//		clear_t_stad();
+//		clear_t_sub_st();
 		cmd = KOG_C_CLOSE;
 		t_wait_press=10;
 		t_wait_mp=5;
@@ -121,15 +121,15 @@
 		*mn_os = lamp;
 	}
 
-    extern const prog_char kog_error_str[5][5] PROGMEM;
-	const prog_char kog_error_str[5][5]=
-	{
-		"Œ¯:",
-		"‰‡‚Î",
-		"Ãœ",
-		" “–",
-		"Œ—"
-	};
+//    extern const prog_char kog_error_str[5][5] PROGMEM;
+//	const prog_char kog_error_str[5][5]=
+//	{
+//		"Œ¯:",
+//		"‰‡‚Î",
+//		"Ãœ",
+//		" “–",
+//		"Œ—"
+//	};
 
 	void KOG::show_lcd()
 	{
@@ -167,8 +167,8 @@
 				uint8_t* _mp,
 				uint8_t* _ktr)
 	{
-		clear_t_stad();
-		clear_t_sub_st();
+//		clear_t_stad();
+//		clear_t_sub_st();
 		cmd = KOG_C_CLOSE;
 		t_wait_press=10;
 		t_wait_mp=5;

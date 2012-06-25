@@ -294,7 +294,7 @@ void all_ind()
 	if(WaitWhenIronIsReady) return;
 }
 
-#include "Dev_kog.h"
+
 uint8_t dev_option;
 void Work_init()
 {

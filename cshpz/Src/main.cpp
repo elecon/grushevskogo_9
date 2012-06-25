@@ -1,6 +1,6 @@
 #include "Main.h"
 
-#define F_CPU 11059200UL
+//#define F_CPU 11059200UL
 //тик системы 1.48(148) ms
 
 //DefineProcess(TAnMeas, 50);
@@ -99,6 +99,7 @@ void start_init(void) {
 	#if (__AVR_ATmega1281__)
 		MCUCR&=~0x1f;
 	#endif
+	#if (__AVR_ATmega128__)  //for MRTP_4
 	DDRA = 0x00;
 	DDRB = 0x00;
     DDRC = 0x03;
@@ -123,6 +124,52 @@ void start_init(void) {
 	DDRC=(1<<PC0)|(1<<PC1)|(1<<PC2)|(1<<PC3);
 	PORTC|=(1<<PC3);
 	DDRE&=~(1<<PE4);//живлення для регістрів ввода/вивода
+	#endif
+
+	#if (__AVR_ATmega1280__) //for MK_035
+//	void start_init(void) __attribute__ ((naked)) __attribute__ ((section (".init5")));
+
+
+
+	MCUCR|=0x80;
+	DDRA = 0x00;
+	DDRB = 0x80;
+    DDRC = 0xff;
+    DDRD = 0xf0;
+    DDRE = 0xA0;
+    DDRF = 0x00;
+    DDRG = 0x2c;
+	DDRH = 0x00;
+	DDRL = 0xff;
+	DDRJ = 0xfa;
+	DDRK = 0xff;
+
+	PORTA = 0xff;
+	PORTB = 0x00;
+	PORTC = 0x00;
+	PORTD = 0x00;
+	PORTE = 0x00;
+	PORTF = 0x00;
+	//PORTG = 0x20;
+	PORTH = 0x00;
+	PORTL = 0x00;
+	PORTJ = 0x00;
+	PORTK = 0x00;
+
+	//XMCRB = (1<<XMM1);
+
+	PORTG|=_BV(PG4);
+	PORTG&=~_BV(PG3);
+	PORTG|=_BV(PG5);
+
+	XMCRA |= _BV(SRE);
+
+//	uint8_t * xbss_clean;
+//    extern uint8_t __xbss_start, __xbss_end;
+//    for ( xbss_clean = &__xbss_start; xbss_clean < &__xbss_end; xbss_clean++) *xbss_clean = 0x00;
+
+#endif
+
 }
 
 int main()
@@ -438,7 +485,12 @@ void TUART0::Exec()
 	UCSR0B=(1<<RXCIE0)|(1<<RXEN0);
 	UCSR0C=(1<<UCSZ01)|(1<<UCSZ00);
 	UBRR0H=0;
-	UBRR0L=11;
+	#if (__AVR_ATmega128__||__AVR_ATmega1281__)
+		UBRR0L=11;
+	#endif
+	#if (__AVR_ATmega1280__)
+		UBRR0L=15;
+	#endif
 
 	cur_net_pack=0;
 	set_uart0_to_receive();
@@ -631,7 +683,12 @@ void TUART1::Exec()
 	UCSR1B=(1<<RXCIE1)|(1<<RXEN1);
 	UCSR1C=(1<<UCSZ11)|(1<<UCSZ10);
 	UBRR1H=0;
-	UBRR1L=11;
+	#if (__AVR_ATmega128__||__AVR_ATmega1281__)
+		UBRR0L=11;
+	#endif
+	#if (__AVR_ATmega1280__)
+		UBRR0L=15;
+	#endif
 	set_uart1_to_receive();
 	Uart1Counter=0;
 

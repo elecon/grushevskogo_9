@@ -1,5 +1,6 @@
 # MCU name
-MCU = atmega1281
+#MCU = atmega1281
+MCU = atmega1280
 
 
 # Processor frequency.
@@ -7,7 +8,8 @@ MCU = atmega1281
 #     processor frequency. You can then use this symbol in your source code to
 #     calculate timings. Do NOT tack on a 'UL' at the end, this will be done
 #     automatically to create a 32-bit value in your source code.
-F_CPU = 11059200
+#F_CPU = 11059200
+F_CPU = 14745600
 
 
 # Output format. (can be srec, ihex, binary)

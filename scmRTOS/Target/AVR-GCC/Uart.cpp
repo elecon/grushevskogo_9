@@ -10,7 +10,7 @@ uint8_t uart_status0;
 uint8_t uart_status1;
 
 uint8_t hex_to_ASCII (uint8_t hex_to_ASCII_temp)
-{    
+{
     hex_to_ASCII_temp&=0x0F;
     if(hex_to_ASCII_temp>9)
 	{
@@ -20,12 +20,12 @@ uint8_t hex_to_ASCII (uint8_t hex_to_ASCII_temp)
 }
                           //rx_data             USART_data
 uint8_t ASCII_to_hex (uint8_t ASCII_to_hex_temp1, uint8_t ASCII_to_hex_temp2)
-{    
+{
     ASCII_to_hex_temp1-=0x30;
     if(ASCII_to_hex_temp1>9)
 	{
 		ASCII_to_hex_temp1-=7;
-	}	
+	}
     ASCII_to_hex_temp2-=0x30;
     if(ASCII_to_hex_temp2>9)
 	{
@@ -34,27 +34,65 @@ uint8_t ASCII_to_hex (uint8_t ASCII_to_hex_temp1, uint8_t ASCII_to_hex_temp2)
     return ((ASCII_to_hex_temp1<<4)&0xF0)+(ASCII_to_hex_temp2&0x0F);
 }
 
-
 void set_uart0_to_transmitt()
 {
-	PORTC&=~(1<<PC0);
-//	PORTC|=(1<<PC0);
+        #if (__AVR_ATmega128__)
+                PORTC&=~(1<<PC0);       //for MRTP_4
+        #endif
+        #if (__AVR_ATmega1280__)
+                PORTK&=~(1<<PK0); //for MK_035
+        #endif
 }
 void set_uart0_to_receive()
 {
-	PORTC|=(1<<PC0);
-//	PORTC&=~(1<<PC0);
+        #if (__AVR_ATmega128__)  //for MRTP_4
+                PORTC|=(1<<PC0);
+        #endif
+        #if (__AVR_ATmega1280__) //for MK_035
+                PORTK|=(1<<PK0);
+        #endif
 }
 void set_uart1_to_transmitt()
 {
-	PORTC|=(1<<PC3);
-	PORTC&=~(1<<PC2);
+        #if (__AVR_ATmega128__)  //for MRTP_4
+                PORTC|=(1<<PC3);
+                PORTC&=~(1<<PC2);
+        #endif
+        #if (__AVR_ATmega1280__) //for MK_035
+                PORTK&=~(1<<PK1);
+        #endif
 }
 void set_uart1_to_receive()
 {
-	PORTC|=(1<<PC2);
-	PORTC&=~(1<<PC3);
+        #if (__AVR_ATmega128__)  //for MRTP_4
+                PORTC|=(1<<PC2);
+                PORTC&=~(1<<PC3);
+        #endif
+        #if (__AVR_ATmega1280__) //for MK_035
+                PORTK|=(1<<PK1);
+        #endif
 }
+//
+//void set_uart0_to_transmitt()
+//{
+//	PORTC&=~(1<<PC0);
+////	PORTC|=(1<<PC0);
+//}
+//void set_uart0_to_receive()
+//{
+//	PORTC|=(1<<PC0);
+////	PORTC&=~(1<<PC0);
+//}
+//void set_uart1_to_transmitt()
+//{
+//	PORTC|=(1<<PC3);
+//	PORTC&=~(1<<PC2);
+//}
+//void set_uart1_to_receive()
+//{
+//	PORTC|=(1<<PC2);
+//	PORTC&=~(1<<PC3);
+//}
 
 //фунции инициализации, передачи, приема уарта0
 uint8_t uart_switcher0;
@@ -184,7 +222,7 @@ void Transmitt_buffer_uart0()
 			set_uart0_to_receive();
 			UCSR0B&=~((1<<TXEN0)|(1<<TXCIE0));
 #if UART0_MASTER
-			UCSR0B=(1<<RXEN0)|(1<<RXCIE0);			
+			UCSR0B=(1<<RXEN0)|(1<<RXCIE0);
 #else
 			uart_status0|=UART_TX_OK;
 #endif
@@ -216,7 +254,7 @@ uint8_t Receive_buffer_uart0(uint8_t adr)
 				uart_switcher0=1;
 				return_value0=1;
 			}
-			
+
 #else
 			if(UDR_temp=='#')
 			{
@@ -296,7 +334,7 @@ uint8_t Receive_buffer_uart0(uint8_t adr)
 							return_value0=2;
 						}
 					}
-				}			
+				}
 				else
 				{
 					uart_checksum0+=UDR_temp;
@@ -315,7 +353,7 @@ uint8_t Receive_buffer_uart0(uint8_t adr)
 					temp=ASCII_to_hex(rx_uart_old_value0,UDR_temp);
 					uart_flags0&=~split;
 					uart_checksum0+=temp;
-					uart_counter0++;							
+					uart_counter0++;
 					*(rx_local_buffer0+uart_counter0)=temp;
 				}
 				else
@@ -521,7 +559,7 @@ uint8_t Receive_buffer_uart1(uint8_t adr)
 				uart_switcher1=1;
 				return_value1=1;
 			}
-			
+
 #else
 			if(UDR_temp=='#')
 			{
@@ -601,7 +639,7 @@ uint8_t Receive_buffer_uart1(uint8_t adr)
 							return_value1=2;
 						}
 					}
-				}			
+				}
 				else
 				{
 					uart_checksum1+=UDR_temp;
@@ -620,7 +658,7 @@ uint8_t Receive_buffer_uart1(uint8_t adr)
 					temp=ASCII_to_hex(rx_uart_old_value1,UDR_temp);
 					uart_flags1&=~split;
 					uart_checksum1+=temp;
-					uart_counter1++;							
+					uart_counter1++;
 					*(rx_local_buffer1+uart_counter1)=temp;
 				}
 				else

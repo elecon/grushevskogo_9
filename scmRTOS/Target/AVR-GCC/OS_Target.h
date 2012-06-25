@@ -69,7 +69,7 @@ typedef byte TStatusReg;
 //    System Timer
 //
 #define OS_SystemTimer_ISR SIG_OVERFLOW0
-#if (__AVR_ATmega1281__) //MRTP_4_s
+#if (__AVR_ATmega1281__||__AVR_ATmega1280__) //MRTP_4_s
 	#define LOCK_SYSTEM_TIMER()    ( TIMSK0 &= ~(1 << TOIE0) )
 	#define UNLOCK_SYSTEM_TIMER()  ( TIMSK0 |=  (1 << TOIE0) )
 #endif

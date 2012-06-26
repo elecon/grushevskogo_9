@@ -36,7 +36,7 @@ uint8_t ASCII_to_hex (uint8_t ASCII_to_hex_temp1, uint8_t ASCII_to_hex_temp2)
 
 void set_uart0_to_transmitt()
 {
-        #if (__AVR_ATmega128__)
+        #if (__AVR_ATmega128__||__AVR_ATmega1281__)
                 PORTC&=~(1<<PC0);       //for MRTP_4
         #endif
         #if (__AVR_ATmega1280__)
@@ -45,7 +45,7 @@ void set_uart0_to_transmitt()
 }
 void set_uart0_to_receive()
 {
-        #if (__AVR_ATmega128__)  //for MRTP_4
+        #if (__AVR_ATmega128__||__AVR_ATmega1281__)  //for MRTP_4
                 PORTC|=(1<<PC0);
         #endif
         #if (__AVR_ATmega1280__) //for MK_035
@@ -54,7 +54,7 @@ void set_uart0_to_receive()
 }
 void set_uart1_to_transmitt()
 {
-        #if (__AVR_ATmega128__)  //for MRTP_4
+        #if (__AVR_ATmega128__||__AVR_ATmega1281__)  //for MRTP_4
                 PORTC|=(1<<PC3);
                 PORTC&=~(1<<PC2);
         #endif
@@ -64,7 +64,7 @@ void set_uart1_to_transmitt()
 }
 void set_uart1_to_receive()
 {
-        #if (__AVR_ATmega128__)  //for MRTP_4
+        #if (__AVR_ATmega128__||__AVR_ATmega1281__)  //for MRTP_4
                 PORTC|=(1<<PC2);
                 PORTC&=~(1<<PC3);
         #endif

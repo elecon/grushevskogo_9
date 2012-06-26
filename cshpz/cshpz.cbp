@@ -12,7 +12,7 @@
 				<Option output="bin/Release/TEST" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
-				<Option compiler="avrgcc" />
+				<Option compiler="avr_gcc_463" />
 				<Compiler>
 					<Add option="-Os" />
 				</Compiler>
@@ -95,6 +95,7 @@
 		<Unit filename="Src/Test.h" />
 		<Unit filename="Src/Version.bat" />
 		<Unit filename="Src/avr-mem.sh" />
+		<Unit filename="Src/linker.ld" />
 		<Unit filename="Src/main.cpp" />
 		<Unit filename="Src/scmRTOS_config.h" />
 		<Unit filename="Src/versionTemplate.h" />
@@ -115,6 +116,7 @@
 		<Unit filename="../scmRTOS/Target/AVR-GCC/Peripheral.h" />
 		<Unit filename="../scmRTOS/Target/AVR-GCC/Uart.cpp" />
 		<Unit filename="../scmRTOS/Target/AVR-GCC/Uart.h" />
+		<Unit filename="../version_gen.sh" />
 		<Extensions>
 			<code_completion />
 			<envvars />

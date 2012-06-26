@@ -156,7 +156,12 @@ EXTMEMOPTS =
 LDFLAGS = -Wl,-Map=$(TARGET).map,--cref
 LDFLAGS += $(EXTMEMOPTS)
 LDFLAGS += $(PRINTF_LIB) $(SCANF_LIB) $(MATH_LIB)
+LDFLAGS = -T linker.ld
 #LDFLAGS += -Wl,-gc-sections
+#ifeq ($(F_CPU),atmega1280)
+#LDFLAGS = -T linker.ld
+
+#endif
 
 #---------------- Programming Options (avrdude) ----------------
 #---------------- Debugging Options ----------------

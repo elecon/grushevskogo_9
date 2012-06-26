@@ -639,8 +639,8 @@ void LCD_ind(int16_t _num, uint8_t _ind, uint8_t _cntr)
 }
 
 // Courier -> LCD
-extern prog_char LCD_simb[256] PROGMEM;
-prog_char LCD_simb[256] =
+extern const prog_char LCD_simb[256] PROGMEM;
+const prog_char LCD_simb[256] =
  {//0     1     2     3     4     5     6     7     8     9     A     B     C     D     E     F
 //
   0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, //0

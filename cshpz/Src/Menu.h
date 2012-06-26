@@ -109,6 +109,6 @@
 	extern const prog_char fire_str2[] PROGMEM;
 	extern const prog_char net_test_str[][14] PROGMEM;
 	extern const prog_char set_str[4][14] PROGMEM;
-	extern prog_char LCD_simb[256] PROGMEM;
+//	extern prog_char LCD_simb[256] PROGMEM;
 	extern const prog_char show_dig_str[2][5] PROGMEM;
 #endif

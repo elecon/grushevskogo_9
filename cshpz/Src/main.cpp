@@ -11,8 +11,8 @@ DefineProcess(TTechnolog, 150);//200
 
 
 //TAnMeas AnMeas(pr0);
-TUART0 UART0(pr0);
-TUART1 UART1(pr1);
+TUART0 UART0(pr1);
+TUART1 UART1(pr0);
 TPeripheral Peripheral(pr2);
 TTechnolog Technolog(pr3);
 
@@ -178,41 +178,73 @@ int main()
 	#if (__AVR_ATmega128__)
 		message_arch_byte[0]=MCUCSR;
 	#endif
-	#if (__AVR_ATmega1281__)
+	#if (__AVR_ATmega1281__||__AVR_ATmega1280__)
 		message_arch_byte[0]=MCUCR;
 	#endif
 
 	message_arch_byte_cpy[0]=0xff;
 
-	#if (__AVR_ATmega128__)
+	#if (__AVR_ATmega128__||__AVR_ATmega1281__)
 		MCUCSR&=~0x1f;
+		DDRA = 0xff;
+        DDRB = 0x00;
+        DDRC = 0x03;
+        DDRD = 0x00;
+        DDRE = 0x10;
+        DDRF = 0x00;
+        DDRG = 0x00;
+        PORTA = 0xff;
+        PORTB = 0x00;
+        PORTC = 0x00;
+        PORTD = 0x00;
+        PORTE = 0x00;
+        PORTF = 0x00;
+        PORTG = 0x00;
+
+        DDRD|=(1<<PD7)|(1<<PD6)|(1<<PD5)|(1<<PD4);
+        //DDRA=0xff;
+
+        PORTD=0xff;
+        PORTD&=~((1<<PD4));//|(1<<PD6));
+
+        DDRC=(1<<PC0)|(1<<PC1)|(1<<PC2)|(1<<PC3);
+        PORTC|=(1<<PC3);
 	#endif
-	#if (__AVR_ATmega1281__)
-		MCUCR&=~0x1f;
+	#if (__AVR_ATmega1280__)
+		MCUCR&=~0x80;
+		DDRA = 0x00;
+        DDRB = 0x80;
+        DDRC = 0xff;
+        DDRD = 0xf0;
+        DDRE = 0xA0;
+        DDRF = 0x00;
+        DDRG = 0x2c;
+        DDRH = 0x00;
+        DDRL = 0xff;
+        DDRJ = 0xfa;
+        DDRK = 0xff;
+
+        PORTA = 0xff;
+        PORTB = 0x00;
+        PORTC = 0x00;
+        PORTD = 0x00;
+        PORTE = 0x00;
+        PORTF = 0x00;
+        //PORTG = 0x20;
+        PORTH = 0x00;
+        PORTL = 0x00;
+        PORTJ = 0x00;
+        PORTK = 0x00;
+
+        //XMCRB = (1<<XMM1);
+
+        PORTG|=_BV(PG4);
+        PORTG&=~_BV(PG3);
+        PORTG|=_BV(PG5);
+
+        XMCRA |= _BV(SRE);
 	#endif
-	DDRA = 0xff;
-	DDRB = 0x00;
-    DDRC = 0x03;
-    DDRD = 0x00;
-    DDRE = 0x10;
-    DDRF = 0x00;
-    DDRG = 0x00;
-	PORTA = 0xff;
-	PORTB = 0x00;
-	PORTC = 0x00;
-	PORTD = 0x00;
-	PORTE = 0x00;
-	PORTF = 0x00;
-	PORTG = 0x00;
 
-	DDRD|=(1<<PD7)|(1<<PD6)|(1<<PD5)|(1<<PD4);
-	//DDRA=0xff;
-
-	PORTD=0xff;
-	PORTD&=~((1<<PD4));//|(1<<PD6));
-
-	DDRC=(1<<PC0)|(1<<PC1)|(1<<PC2)|(1<<PC3);
-	PORTC|=(1<<PC3);
 
 	//PORTC&=~_BV(PC1);
 
@@ -506,7 +538,13 @@ void TUART0::Exec()
 		{
             uiNetCounter=0;
             NetPackInfo[cur_net_pack]=0;
-			PORTC&=~_BV(PC1);			//Блималка при гарному пакеті
+			#if (__AVR_ATmega128__||__AVR_ATmega1281__)
+                PORTC&=~_BV(PC1);			//Блималка при гарному пакеті
+			#endif
+			#if (__AVR_ATmega1280__)
+                PORTK&=~_BV(PK4); //for MK_035
+            #endif
+
 			uart_status0&=~UART_RX_OK;
 			switch(cur_net_pack)
 			{
@@ -571,7 +609,13 @@ void TUART0::Exec()
 //----------------------------------------------------------------------------
 		}
 		else {
-			PORTC|=_BV(PC1);
+		    #if (__AVR_ATmega128__||__AVR_ATmega1281__)
+                PORTC|=_BV(PC1);
+            #endif
+            #if (__AVR_ATmega1280__)
+                PORTK|=_BV(PK4); //for MK_035
+            #endif
+
             if(NetPackInfo[cur_net_pack]<40) NetPackInfo[cur_net_pack]++;//
 
 		}
@@ -684,10 +728,10 @@ void TUART1::Exec()
 	UCSR1C=(1<<UCSZ11)|(1<<UCSZ10);
 	UBRR1H=0;
 	#if (__AVR_ATmega128__||__AVR_ATmega1281__)
-		UBRR0L=11;
+		UBRR1L=11;
 	#endif
 	#if (__AVR_ATmega1280__)
-		UBRR0L=15;
+		UBRR1L=15;
 	#endif
 	set_uart1_to_receive();
 	Uart1Counter=0;
@@ -696,10 +740,10 @@ void TUART1::Exec()
     {
 		//#if !UART1_MASTER
 		if (Uart1Counter==2) {
-			efUART1.Wait(30);//200
+			efUART1.Wait(40);//200
 		}
 		else {
-			efUART1.Wait(10);//200
+			efUART1.Wait(20);//200
 		}
 		//#endif
 		if (Uart1Counter==0) {
@@ -922,7 +966,7 @@ void TPeripheral::Exec()
 	for(;;)
     {
 		low_drv();
-		Sleep(1);//10.37ms
+		Sleep(10);//10.37ms
     }
 }
 

@@ -1,7 +1,7 @@
 #! /bin/sh
 # Utility to print out sizes of the different memory spaces
 #   of an ELF file for the AVR target.
-# Written by Jörg Wunsch and Eric B. Weddington
+# Written by JÃ¶rg Wunsch and Eric B. Weddington
 # Released to the Public Domain
 
 
@@ -124,7 +124,7 @@ END {
 	printf "			Program:%8d bytes", text
     if (progmax > 0)
     {
-        printf " (%2.1f%% Full)", (text / progmax) * 100;
+        printf " (%2.2f%% Full)", (text / progmax) * 100;
     }
     else
     {
@@ -134,7 +134,7 @@ END {
 	printf "        		Data:   %8d bytes", data;
     if (datamax > 0)
     {
-        printf " (%2.1f%% Full)", (data / datamax) * 100;
+        printf " (%2.2f%% Full)", (data / datamax) * 100;
     }
     else
     {
@@ -142,12 +142,12 @@ END {
     }
     print  "(.data + .bss + .noinit)"
 #--------------------------------------------------------------------------------
-	if (xbss > 0) 
-    { 	
+	if (xbss > 0)
+    {
 	printf "        		XSRAM:  %8d bytes", xbss;
     if (datamax > 0)
     {
-        printf " (%2.1f%% Full)", (xbss / xbssmax) * 100;
+        printf " (%2.2f%% Full)", (xbss / xbssmax) * 100;
     }
     else
     {
@@ -156,12 +156,12 @@ END {
     print  "(.xbss)"
 	}
 #--------------------------------------------------------------------------------
-	if (eeprom > 0) 
-    { 
+	if (eeprom > 0)
+    {
         printf "EEPROM: %8d bytes", eeprom;
         if (eeprommax > 0)
         {
-            printf " (%2.1f%% Full)", (eeprom / eeprommax) * 100;
+            printf " (%2.2f%% Full)", (eeprom / eeprommax) * 100;
         }
         else
         {

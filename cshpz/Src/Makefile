@@ -156,8 +156,8 @@ EXTMEMOPTS =
 LDFLAGS = -Wl,-Map=$(TARGET).map,--cref
 LDFLAGS += $(EXTMEMOPTS)
 LDFLAGS += $(PRINTF_LIB) $(SCANF_LIB) $(MATH_LIB)
-#LDFLAGS = -T avr5.x
-LDFLAGS = -T linker.ld
+LDFLAGS = -T avr5.x
+#LDFLAGS = -T linker.ld
 #LDFLAGS += -Wl,-gc-sections
 #ifeq ($(F_CPU),atmega1280)
 #LDFLAGS = -T linker.ld
@@ -398,7 +398,7 @@ clean_list :
 	$(REMOVEDIR) .dep
 	$(REMOVE) ../../hexout/'$(TARGET)$(VERSEP)'*.hex
 
-program:
+program: all
 	avrdude -c avrisp2 -p $(MCU) -B 0.5 -P usb -v -y -U flash:w:$(TARGET).hex
 #	$(COPY) ryba.hex g:/mrtp/
 #	$(COPY) $(TARGET).hex g:/mrtp/ryba.hex

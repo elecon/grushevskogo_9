@@ -243,7 +243,7 @@ copir:
 	$(COPY) $(TARGET).hex ../../hexout/'$(smhm)'.hex
 
 end:
-	#@echo $(MSG_END)
+#	@echo $(MSG_END)
 
 
 

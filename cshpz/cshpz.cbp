@@ -95,6 +95,7 @@
 		<Unit filename="Src/Test.h" />
 		<Unit filename="Src/Version.bat" />
 		<Unit filename="Src/avr-mem.sh" />
+		<Unit filename="Src/avr5.x" />
 		<Unit filename="Src/linker.ld" />
 		<Unit filename="Src/main.cpp" />
 		<Unit filename="Src/scmRTOS_config.h" />

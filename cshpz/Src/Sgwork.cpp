@@ -46,7 +46,7 @@ extern NET_INPUT_STRUCT1 data_for_slave21;
 extern uint8_t NetPackInfo[NUM_OF_SCAF];//
 uint16_t scafe_fl;
 uint16_t fire_fl;
-uint16_t alarm_fl;
+uint16_t alarm_fl XBSS;
 
 
 uint16_t TestMT;

@@ -10,6 +10,13 @@
 	#include <string.h>
 	#include "../../netstruct.h"
 
+    #define XDATA __attribute__((section(".xdata")))
+    #define XBSS  __attribute__((section(".xbss")))
+
+    #define DATA  __attribute__((section(".data")))
+    #define BSS   __attribute__((section(".bss")))
+
+
 	//tech_fl
 	extern uint8_t tech_fl;
 	#define DIG_INPUT	0x01

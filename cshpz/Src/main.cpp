@@ -164,9 +164,9 @@ void start_init(void) {
 
 	XMCRA |= _BV(SRE);
 
-//	uint8_t * xbss_clean;
-//    extern uint8_t __xbss_start, __xbss_end;
-//    for ( xbss_clean = &__xbss_start; xbss_clean < &__xbss_end; xbss_clean++) *xbss_clean = 0x00;
+	uint8_t * xbss_clean;
+    extern uint8_t __xbss_start, __xbss_end;
+    for ( xbss_clean = &__xbss_start; xbss_clean < &__xbss_end; xbss_clean++) *xbss_clean = 0x00;
 
 #endif
 

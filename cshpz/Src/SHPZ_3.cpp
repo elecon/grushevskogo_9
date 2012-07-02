@@ -2,7 +2,7 @@
 #include "../../Devs/Dev_kog_t.h"
 #include "../../Devs/Dev_moe.h"
 #include "../../Devs/Dev_zov_t.h"
-#include "../../Devs/Dev_kog.h"
+#include "../../Devs/Dev_kog_net.h"
 
 extern uint16_t fire_fl;
 extern uint8_t fire_floor;
@@ -32,7 +32,7 @@ const prog_char strVZK2[]="ÂÇÊ2";
 const prog_char strVZK3[]="ÂÇÊ3";
 const prog_char strVZK4[]="ÂÇÊ4";
 
-KOG_NET KPD22 (strKPD21,
+KOG_NET KPD22(strKPD21,
                (uint8_t*)&data_from_slave3.devs_net_stat[0],
                (uint8_t*)&data_for_slave3.devs_net_cmd[0],
                (uint8_t*)&mRRR//,

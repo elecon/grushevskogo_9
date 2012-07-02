@@ -29,6 +29,8 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../Devs/Dev_kog.cpp" />
+		<Unit filename="../Devs/Dev_kog.h" />
 		<Unit filename="../Devs/Dev_kog_t.cpp" />
 		<Unit filename="../Devs/Dev_kog_t.h" />
 		<Unit filename="../Devs/Dev_moe.cpp" />

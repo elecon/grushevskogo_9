@@ -45,6 +45,6 @@
     #define mVZK_4_11	        LED_FIELD[25+80*15]
 
 
-
+    #define mRRR		        LED_FIELD[37]
 
 #endif

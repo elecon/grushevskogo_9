@@ -8,7 +8,7 @@
 
 #define NUM_OF_DEVS_CENTER 11
 #define NUM_OF_DEVS_02 11
-#define NUM_OF_DEVS_3 15
+#define NUM_OF_DEVS_3 1
 #define NUM_OF_DEVS_6 15
 #define NUM_OF_DEVS_9 15
 #define NUM_OF_DEVS_11 10

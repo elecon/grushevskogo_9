@@ -358,7 +358,7 @@ extcoff: $(TARGET).elf
 # Compile: create object files from C source files.
 %.o : %.cpp
 #	@echo
-	@echo $(MSG_COMPILING) $<
+	@echo $(MSG_COMPILING) $< ;\
 	$(CC) -c $(ALL_CFLAGS) $< -o $@
 
 

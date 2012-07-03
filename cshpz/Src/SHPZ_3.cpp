@@ -32,12 +32,17 @@ const prog_char strVZK2[]="ÂÇÊ2";
 const prog_char strVZK3[]="ÂÇÊ3";
 const prog_char strVZK4[]="ÂÇÊ4";
 
-KOG_NET KPD22(strKPD21,
-               (uint8_t*)&data_from_slave3.devs_net_stat[0],
-               (uint8_t*)&data_for_slave3.devs_net_cmd[0],
-               (uint8_t*)&mRRR//,
-               //rrrr
-               );
+const prog_char strVZK99[][5]=
+{
+    "ÂÇÊ9",
+    "ÂÇÊ8",
+};
+
+//KOG_NET KPD22   (strVZK99[0],
+//                (uint8_t*)&data_from_slave3.devs_net_stat[0],
+//                (uint8_t*)&data_for_slave3.devs_net_cmd[0],
+//                (uint8_t*)&mRRR);
+KOG_NET KPD22;
 //MOE <76,MSK_NUMER_MOE,2,OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,dev_name_str_moe> GR4;
 MOE_NET < 5+80*14,strKPD21,&data_from_slave3,&data_for_slave3,0,NET_WORK_SHPZ3> KPD21;
 //MOE_NET <47+80*15,strKPD22,&data_from_slave3,&data_for_slave3,1,NET_WORK_SHPZ3> KPD22;

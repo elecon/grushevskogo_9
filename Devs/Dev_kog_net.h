@@ -1,5 +1,5 @@
-#ifndef __DEVKOG_H
-	#define __DEVKOG_H
+#ifndef __DEVKOG_NET_H
+	#define __DEVKOG_NET_H
 
 	#include "DEVS.H"
     #include "Nls.h"
@@ -42,66 +42,25 @@
 	#define KOG_STAN    	0x20 //ошибка теплового реле
 	#define KOG_OS_ERROR	0x10 //ошибка обратной связи
 
-	class KOG: public TDevObject
+
+
+	class KOG_NET: public TDevObject
 	{
 		public:
-			uint8_t *out;//выбор выхода
-			uint8_t *k_press;
-			uint8_t *os;//указатель на байт обратной связи
-			uint8_t *k_mp;
-			uint8_t *k_ktr;
-			uint16_t enh_info;
-			uint8_t *mn_os;
-			int8_t s_n;
-			uint8_t cmd;
+            uint8_t *net_stan;
+            uint8_t *net_stad;
+            uint8_t *mn_os;
+            //uint8_t num;
 			const prog_char *name;
-
-			uint8_t t_repit_counter;
-            uint8_t t_kog_wait;
-
-			uint16_t t_wait_press;
-			uint16_t t_wait_press_counter;
-			uint16_t t_wait_mp;
-			uint16_t t_wait_mp_counter;
 			void drv();
 			void show_mnem();
 			void show_lcd();
-			void check_press();
-			void check_mp();
-			void check_ktr();
-			void check_os();
-			void auto_open();
-			void auto_close();
-			KOG();
-			KOG(	const prog_char* _name,
-					uint8_t* _mn_os,
-					uint16_t enh_info,
-					uint8_t* _out,
-					uint8_t* _press,
-					uint8_t* _os,
-					uint8_t* _mp,
-					uint8_t* _ktr);
-	};
 
-//	class KOG_NET: public TDevObject
-//	{
-//		public:
-//            uint8_t *net_stan;
-//            uint8_t *net_stad;
-//            uint8_t *mn_os;
-//            //uint8_t num;
-//			const prog_char *name;
-//			void drv();
-//			void show_mnem();
-//			void show_lcd();
-//
-//			KOG_NET();
-//			KOG_NET(const prog_char* _name,
+			KOG_NET();
+//			KOG_NET (const prog_char* _name,
 //					uint8_t* _net_stan,
 //					uint8_t* _net_stad,
-//					uint8_t* _mn_os//,
-//					//uint8_t _num
-//					);
-//	};
+//					uint8_t* _mn_os);
+	};
 
 #endif

@@ -38,7 +38,6 @@ const prog_char strVZK99[][5]=
     "ÂÇÊ8",
 };
 
-
 //KOG_NET KPD22   (strVZK99[0],
 //                (uint8_t*)&data_from_slave3.devs_net_stat[0],
 //                (uint8_t*)&data_for_slave3.devs_net_cmd[0],

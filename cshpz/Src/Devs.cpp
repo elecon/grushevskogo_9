@@ -190,10 +190,11 @@ void show_devs_02()
 uint8_t _cur_dev_3;
 void show_devs_3()
 {
-//	_cur_dev_3=getpm(_cur_dev_3,NUM_OF_DEVS_3);
-//	pDevs_arr_3[_cur_dev_3]->show_lcd();
-    _cur_dev_02=getpm(_cur_dev_02,NUM_OF_DEVS_02);
-	pDevs_arr_02[_cur_dev_02]->show_lcd();
+	_cur_dev_3=getpm(_cur_dev_3,NUM_OF_DEVS_3);
+	pDevs_arr_3[_cur_dev_3]->show_lcd();
+//    _cur_dev_02=getpm(_cur_dev_02,NUM_OF_DEVS_02);
+//	pDevs_arr_02[_cur_dev_02]->show_lcd();
+    //LCD_abc((char*)strNoDevs,21);//17
 }
 uint8_t _cur_dev_6;
 void show_devs_6()

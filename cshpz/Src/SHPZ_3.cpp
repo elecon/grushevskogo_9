@@ -17,24 +17,24 @@ extern NET_INPUT_STRUCT1 data_for_slave3;
 //extern const prog_char strKPD181[] PROGMEM;
 //uint8_t rrrr=1;
 const prog_char strKPD21[]="ÊÏÄ21";
-//const prog_char strKPD22[]="ÊÏÄ22";
-//const prog_char strKPD31[]="ÊÏÄ31";
-//const prog_char strKPD32[]="ÊÏÄ32";
-//const prog_char strKPD41[]="ÊÏÄ41";
-//const prog_char strKPD42[]="ÊÏÄ42";
-//const prog_char strPP2[]="ÏÏ2";
-//const prog_char strPP3[]="ÏÏ3";
-//const prog_char strPP4[]="ÏÏ4";
-//const prog_char strZOV2[]="ÇÎÂ2";
-//const prog_char strZOV3[]="ÇÎÂ3";
-//const prog_char strZOV4[]="ÇÎÂ4";
-//const prog_char strVZK2[]="ÂÇÊ2";
-//const prog_char strVZK3[]="ÂÇÊ3";
-//const prog_char strVZK4[]="ÂÇÊ4";
+const prog_char strKPD22[]="ÊÏÄ22";
+const prog_char strKPD31[]="ÊÏÄ31";
+const prog_char strKPD32[]="ÊÏÄ32";
+const prog_char strKPD41[]="ÊÏÄ41";
+const prog_char strKPD42[]="ÊÏÄ42";
+const prog_char strPP2[]="ÏÏ2";
+const prog_char strPP3[]="ÏÏ3";
+const prog_char strPP4[]="ÏÏ4";
+const prog_char strZOV2[]="ÇÎÂ2";
+const prog_char strZOV3[]="ÇÎÂ3";
+const prog_char strZOV4[]="ÇÎÂ4";
+const prog_char strVZK2[]="ÂÇÊ2";
+const prog_char strVZK3[]="ÂÇÊ3";
+const prog_char strVZK4[]="ÂÇÊ4";
 
 
 //
-KOG_NET KPD22   (strKPD21,
+KOG_NET KPD21   (strKPD21,
                 (uint8_t*)&data_from_slave3.devs_net_stat[0],
                 (uint8_t*)&data_for_slave3.devs_net_cmd[0],
                 (uint8_t*)&mRRR,
@@ -61,7 +61,7 @@ KOG_NET KPD22   (strKPD21,
 
 TDevObject* pDevs_arr_3[]=
 {
-	&KPD22,
+	&KPD21,
 //	&KPD22,
 //	&PP2,
 //	&ZOV2,
@@ -82,60 +82,60 @@ TDevObject* pDevs_arr_3[]=
 
 uint8_t* VZK_arr_3[]=
 {
-//    (uint8_t*)&mVZK_2_1,
-//    (uint8_t*)&mVZK_2_2,
-//    (uint8_t*)&mVZK_2_3,
-//    (uint8_t*)&mVZK_2_4,
-//    (uint8_t*)&mVZK_2_5,
-//
-//    (uint8_t*)&mVZK_2_6,
-//    (uint8_t*)&mVZK_2_7,
-//    (uint8_t*)&mVZK_2_8,
-//    (uint8_t*)&mVZK_2_9,
-//    (uint8_t*)&mVZK_2_10,
-//
-//    (uint8_t*)&mVZK_2_11,
-//
-//    (uint8_t*)&mVZK_3_1,
-//    (uint8_t*)&mVZK_3_2,
-//    (uint8_t*)&mVZK_3_3,
-//    (uint8_t*)&mVZK_3_4,
-//    (uint8_t*)&mVZK_3_5,
-//
-//    (uint8_t*)&mVZK_3_6,
-//    (uint8_t*)&mVZK_3_7,
-//    (uint8_t*)&mVZK_3_8,
-//    (uint8_t*)&mVZK_3_9,
-//    (uint8_t*)&mVZK_3_10,
-//
-//    (uint8_t*)&mVZK_3_11,
-//
-//
-//    (uint8_t*)&mVZK_4_1,
-//    (uint8_t*)&mVZK_4_2,
-//    (uint8_t*)&mVZK_4_3,
-//    (uint8_t*)&mVZK_4_4,
-//    (uint8_t*)&mVZK_4_5,
-//
-//    (uint8_t*)&mVZK_4_6,
-//    (uint8_t*)&mVZK_4_7,
-//    (uint8_t*)&mVZK_4_8,
-//    (uint8_t*)&mVZK_4_9,
-//    (uint8_t*)&mVZK_4_10,
-//
-//    (uint8_t*)&mVZK_4_11,
+    (uint8_t*)&mVZK_2_1,
+    (uint8_t*)&mVZK_2_2,
+    (uint8_t*)&mVZK_2_3,
+    (uint8_t*)&mVZK_2_4,
+    (uint8_t*)&mVZK_2_5,
+
+    (uint8_t*)&mVZK_2_6,
+    (uint8_t*)&mVZK_2_7,
+    (uint8_t*)&mVZK_2_8,
+    (uint8_t*)&mVZK_2_9,
+    (uint8_t*)&mVZK_2_10,
+
+    (uint8_t*)&mVZK_2_11,
+
+    (uint8_t*)&mVZK_3_1,
+    (uint8_t*)&mVZK_3_2,
+    (uint8_t*)&mVZK_3_3,
+    (uint8_t*)&mVZK_3_4,
+    (uint8_t*)&mVZK_3_5,
+
+    (uint8_t*)&mVZK_3_6,
+    (uint8_t*)&mVZK_3_7,
+    (uint8_t*)&mVZK_3_8,
+    (uint8_t*)&mVZK_3_9,
+    (uint8_t*)&mVZK_3_10,
+
+    (uint8_t*)&mVZK_3_11,
+
+
+    (uint8_t*)&mVZK_4_1,
+    (uint8_t*)&mVZK_4_2,
+    (uint8_t*)&mVZK_4_3,
+    (uint8_t*)&mVZK_4_4,
+    (uint8_t*)&mVZK_4_5,
+
+    (uint8_t*)&mVZK_4_6,
+    (uint8_t*)&mVZK_4_7,
+    (uint8_t*)&mVZK_4_8,
+    (uint8_t*)&mVZK_4_9,
+    (uint8_t*)&mVZK_4_10,
+
+    (uint8_t*)&mVZK_4_11,
 };
 
 extern uint16_t i;
 void Shpz_3_Ind()
 {
 
-     if (net_fl&(1<<NET_WORK_SHPZ3)) {
-        for (i=0;i<33;i++) {
+//     if (net_fl&(1<<NET_WORK_SHPZ3)) {
+//        for (i=0;i<33;i++) {
 //             *VZK_arr_3[i]=null_lamp;
-        }
-    }
-    else {
+//        }
+//    }
+//    else {
 //        for (i=0;i<11;i++) {
 //            if (VZK2.stan&KOGT_OP) {
 //                if (data_from_slave3.VZK_FL1[0]&(1<<i)) *VZK_arr_3[i]=red_lamp; else *VZK_arr_3[i]=red_b_lamp;
@@ -162,7 +162,7 @@ void Shpz_3_Ind()
 //                if (data_from_slave3.VZK_FL1[i/8]&(1<<(i%8))) *VZK_arr_3[i]=green_b_lamp; else *VZK_arr_3[i]=green_lamp;
 //            }
 //        }
-    }
+//    }
 }
 
 void Shpz_3_Work()

@@ -7,16 +7,16 @@
 
 
 #define NUM_OF_DEVS_CENTER 11
-#define NUM_OF_DEVS_02 11
-#define NUM_OF_DEVS_3 1
-#define NUM_OF_DEVS_6 15
-#define NUM_OF_DEVS_9 15
-#define NUM_OF_DEVS_11 10
-#define NUM_OF_DEVS_14 15
-#define NUM_OF_DEVS_16 15
-#define NUM_OF_DEVS_18 15
-#define NUM_OF_DEVS_20 15
-#define NUM_OF_DEVS_21 11
+#define NUM_OF_DEVS_02 1
+//#define NUM_OF_DEVS_3 1
+//#define NUM_OF_DEVS_6 15
+//#define NUM_OF_DEVS_9 15
+//#define NUM_OF_DEVS_11 10
+//#define NUM_OF_DEVS_14 15
+//#define NUM_OF_DEVS_16 15
+//#define NUM_OF_DEVS_18 15
+//#define NUM_OF_DEVS_20 15
+//#define NUM_OF_DEVS_21 11
 
 extern NET_OUTPUT_STRUCT1 data_from_slave18;
 extern NET_INPUT_STRUCT1 data_for_slave18;
@@ -94,11 +94,11 @@ void Dev_drv()
 	uint8_t i;
 	//GR2.show_lcd();
 
-	for(i=0;i<NUM_OF_DEVS_CENTER;i++)
-	{
-		pDevs_arr_Center[i]->drv();
-		pDevs_arr_Center[i]->show_mnem();
-	}
+//	for(i=0;i<NUM_OF_DEVS_CENTER;i++)
+//	{
+//		pDevs_arr_Center[i]->drv();
+//		pDevs_arr_Center[i]->show_mnem();
+//	}
 
 	for(i=0;i<NUM_OF_DEVS_02;i++)
 	{
@@ -106,60 +106,60 @@ void Dev_drv()
 		pDevs_arr_02[i]->show_mnem();
 	}
 
-	for(i=0;i<NUM_OF_DEVS_3;i++)
-	{
-		pDevs_arr_3[i]->drv();
-		pDevs_arr_3[i]->show_mnem();
-	}
-
-	for(i=0;i<NUM_OF_DEVS_6;i++)
-	{
-		pDevs_arr_6[i]->drv();
-		pDevs_arr_6[i]->show_mnem();
-	}
-
-    for(i=0;i<NUM_OF_DEVS_9;i++)
-	{
-		pDevs_arr_9[i]->drv();
-		pDevs_arr_9[i]->show_mnem();
-	}
-
-    for(i=0;i<NUM_OF_DEVS_11;i++)
-	{
-		pDevs_arr_11[i]->drv();
-		pDevs_arr_11[i]->show_mnem();
-	}
-
-    for(i=0;i<NUM_OF_DEVS_14;i++)
-	{
-		pDevs_arr_14[i]->drv();
-		pDevs_arr_14[i]->show_mnem();
-	}
-
-
-	for(i=0;i<NUM_OF_DEVS_16;i++)
-	{
-		pDevs_arr_16[i]->drv();
-		pDevs_arr_16[i]->show_mnem();
-	}
-
-	for(i=0;i<NUM_OF_DEVS_18;i++)
-	{
-		pDevs_arr_18[i]->drv();
-		pDevs_arr_18[i]->show_mnem();
-	}
-
-    for(i=0;i<NUM_OF_DEVS_20;i++)
-	{
-		pDevs_arr_20[i]->drv();
-		pDevs_arr_20[i]->show_mnem();
-	}
-
-    for(i=0;i<NUM_OF_DEVS_21;i++)
-	{
-		pDevs_arr_21[i]->drv();
-		pDevs_arr_21[i]->show_mnem();
-	}
+//	for(i=0;i<NUM_OF_DEVS_3;i++)
+//	{
+//		pDevs_arr_3[i]->drv();
+//		pDevs_arr_3[i]->show_mnem();
+//	}
+//
+//	for(i=0;i<NUM_OF_DEVS_6;i++)
+//	{
+//		pDevs_arr_6[i]->drv();
+//		pDevs_arr_6[i]->show_mnem();
+//	}
+//
+//    for(i=0;i<NUM_OF_DEVS_9;i++)
+//	{
+//		pDevs_arr_9[i]->drv();
+//		pDevs_arr_9[i]->show_mnem();
+//	}
+//
+//    for(i=0;i<NUM_OF_DEVS_11;i++)
+//	{
+//		pDevs_arr_11[i]->drv();
+//		pDevs_arr_11[i]->show_mnem();
+//	}
+//
+//    for(i=0;i<NUM_OF_DEVS_14;i++)
+//	{
+//		pDevs_arr_14[i]->drv();
+//		pDevs_arr_14[i]->show_mnem();
+//	}
+//
+//
+//	for(i=0;i<NUM_OF_DEVS_16;i++)
+//	{
+//		pDevs_arr_16[i]->drv();
+//		pDevs_arr_16[i]->show_mnem();
+//	}
+//
+//	for(i=0;i<NUM_OF_DEVS_18;i++)
+//	{
+//		pDevs_arr_18[i]->drv();
+//		pDevs_arr_18[i]->show_mnem();
+//	}
+//
+//    for(i=0;i<NUM_OF_DEVS_20;i++)
+//	{
+//		pDevs_arr_20[i]->drv();
+//		pDevs_arr_20[i]->show_mnem();
+//	}
+//
+//    for(i=0;i<NUM_OF_DEVS_21;i++)
+//	{
+//		pDevs_arr_21[i]->drv();
+//		pDevs_arr_21[i]->show_mnem();
+//	}
 
 //	for(i=0;i<NUM_OF_DEVS_2;i++)
 //	{
@@ -173,12 +173,12 @@ void Dev_drv()
 extern const prog_char strNoDevs[] PROGMEM;
 const prog_char strNoDevs[]="No devs";
 
-uint8_t _cur_dev_center;
-void show_devs_center()
-{
-	_cur_dev_center=getpm(_cur_dev_center,NUM_OF_DEVS_CENTER);
-	pDevs_arr_Center[_cur_dev_center]->show_lcd();
-}
+//uint8_t _cur_dev_center;
+//void show_devs_center()
+//{
+//	_cur_dev_center=getpm(_cur_dev_center,NUM_OF_DEVS_CENTER);
+//	pDevs_arr_Center[_cur_dev_center]->show_lcd();
+//}
 
 uint8_t _cur_dev_02;
 void show_devs_02()
@@ -187,65 +187,65 @@ void show_devs_02()
 	pDevs_arr_02[_cur_dev_02]->show_lcd();
 }
 
-uint8_t _cur_dev_3;
-void show_devs_3()
-{
-	_cur_dev_3=getpm(_cur_dev_3,NUM_OF_DEVS_3);
-	pDevs_arr_3[_cur_dev_3]->show_lcd();
-//    _cur_dev_02=getpm(_cur_dev_02,NUM_OF_DEVS_02);
-//	pDevs_arr_02[_cur_dev_02]->show_lcd();
-    //LCD_abc((char*)strNoDevs,21);//17
-}
-uint8_t _cur_dev_6;
-void show_devs_6()
-{
-	_cur_dev_6=getpm(_cur_dev_6,NUM_OF_DEVS_6);
-	pDevs_arr_6[_cur_dev_6]->show_lcd();
-}
-uint8_t _cur_dev_9;
-void show_devs_9()
-{
-	_cur_dev_9=getpm(_cur_dev_9,NUM_OF_DEVS_9);
-	pDevs_arr_9[_cur_dev_9]->show_lcd();
-}
-uint8_t _cur_dev_11;
-void show_devs_11()
-{
-	_cur_dev_11=getpm(_cur_dev_11,NUM_OF_DEVS_11);
-	pDevs_arr_11[_cur_dev_11]->show_lcd();
-}
-uint8_t _cur_dev_14;
-void show_devs_14()
-{
-	_cur_dev_14=getpm(_cur_dev_14,NUM_OF_DEVS_14);
-	pDevs_arr_14[_cur_dev_14]->show_lcd();
-}
-uint8_t _cur_dev_16;
-void show_devs_16()
-{
-	_cur_dev_16=getpm(_cur_dev_16,NUM_OF_DEVS_16);
-	pDevs_arr_16[_cur_dev_16]->show_lcd();
-}
-uint8_t _cur_dev_18;
-void show_devs_18()
-{
-	_cur_dev_18=getpm(_cur_dev_18,NUM_OF_DEVS_18);
-	pDevs_arr_18[_cur_dev_18]->show_lcd();
-}
-
-uint8_t _cur_dev_20;
-void show_devs_20()
-{
-	_cur_dev_20=getpm(_cur_dev_20,NUM_OF_DEVS_20);
-	pDevs_arr_20[_cur_dev_20]->show_lcd();
-}
-
-uint8_t _cur_dev_21;
-void show_devs_21()
-{
-	_cur_dev_21=getpm(_cur_dev_21,NUM_OF_DEVS_21);
-	pDevs_arr_21[_cur_dev_21]->show_lcd();
-}
+//uint8_t _cur_dev_3;
+//void show_devs_3()
+//{
+//	_cur_dev_3=getpm(_cur_dev_3,NUM_OF_DEVS_3);
+//	pDevs_arr_3[_cur_dev_3]->show_lcd();
+////    _cur_dev_02=getpm(_cur_dev_02,NUM_OF_DEVS_02);
+////	pDevs_arr_02[_cur_dev_02]->show_lcd();
+//    //LCD_abc((char*)strNoDevs,21);//17
+//}
+//uint8_t _cur_dev_6;
+//void show_devs_6()
+//{
+//	_cur_dev_6=getpm(_cur_dev_6,NUM_OF_DEVS_6);
+//	pDevs_arr_6[_cur_dev_6]->show_lcd();
+//}
+//uint8_t _cur_dev_9;
+//void show_devs_9()
+//{
+//	_cur_dev_9=getpm(_cur_dev_9,NUM_OF_DEVS_9);
+//	pDevs_arr_9[_cur_dev_9]->show_lcd();
+//}
+//uint8_t _cur_dev_11;
+//void show_devs_11()
+//{
+//	_cur_dev_11=getpm(_cur_dev_11,NUM_OF_DEVS_11);
+//	pDevs_arr_11[_cur_dev_11]->show_lcd();
+//}
+//uint8_t _cur_dev_14;
+//void show_devs_14()
+//{
+//	_cur_dev_14=getpm(_cur_dev_14,NUM_OF_DEVS_14);
+//	pDevs_arr_14[_cur_dev_14]->show_lcd();
+//}
+//uint8_t _cur_dev_16;
+//void show_devs_16()
+//{
+//	_cur_dev_16=getpm(_cur_dev_16,NUM_OF_DEVS_16);
+//	pDevs_arr_16[_cur_dev_16]->show_lcd();
+//}
+//uint8_t _cur_dev_18;
+//void show_devs_18()
+//{
+//	_cur_dev_18=getpm(_cur_dev_18,NUM_OF_DEVS_18);
+//	pDevs_arr_18[_cur_dev_18]->show_lcd();
+//}
+//
+//uint8_t _cur_dev_20;
+//void show_devs_20()
+//{
+//	_cur_dev_20=getpm(_cur_dev_20,NUM_OF_DEVS_20);
+//	pDevs_arr_20[_cur_dev_20]->show_lcd();
+//}
+//
+//uint8_t _cur_dev_21;
+//void show_devs_21()
+//{
+//	_cur_dev_21=getpm(_cur_dev_21,NUM_OF_DEVS_21);
+//	pDevs_arr_21[_cur_dev_21]->show_lcd();
+//}
 
 
 uint8_t _cur_dev_set;

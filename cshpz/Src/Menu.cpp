@@ -28,9 +28,9 @@ Menu MT_TEST2_MENU_screen;
 Menu TEST2_MENU_screen;
 Menu INFO_MENU_screen;
 Menu NET_TEST2_MENU_screen;
-Menu NET_MENU_02_screen,NET_MENU_CENTER_screen,NET_MENU_3_screen,NET_MENU_6_screen,NET_MENU_9_screen;
-Menu NET_MENU_11_screen,NET_MENU_14_screen,NET_MENU_16_screen,NET_MENU_18_screen;
-Menu NET_MENU_20_screen,NET_MENU_21_screen;
+Menu NET_MENU_02_screen;//,NET_MENU_CENTER_screen,NET_MENU_3_screen,NET_MENU_6_screen,NET_MENU_9_screen;
+//Menu NET_MENU_11_screen,NET_MENU_14_screen,NET_MENU_16_screen,NET_MENU_18_screen;
+//Menu NET_MENU_20_screen,NET_MENU_21_screen;
 
 Menu* pMenu_arr[]=
 {
@@ -61,18 +61,18 @@ Menu* pMenu_arr[]=
 	&NET_TEST2_MENU_screen,
 
     &NET_MENU_02_screen,
-    &NET_MENU_3_screen,
-    &NET_MENU_6_screen,
-    &NET_MENU_9_screen,
-    &NET_MENU_11_screen,
-
-    &NET_MENU_14_screen,
-    &NET_MENU_16_screen,
-    &NET_MENU_18_screen,
-    &NET_MENU_20_screen,
-    &NET_MENU_21_screen,
-
-    &NET_MENU_CENTER_screen,
+//    &NET_MENU_3_screen,
+//    &NET_MENU_6_screen,
+//    &NET_MENU_9_screen,
+//    &NET_MENU_11_screen,
+//
+//    &NET_MENU_14_screen,
+//    &NET_MENU_16_screen,
+//    &NET_MENU_18_screen,
+//    &NET_MENU_20_screen,
+//    &NET_MENU_21_screen,
+//
+//    &NET_MENU_CENTER_screen,
 };
 
 
@@ -307,15 +307,15 @@ void show_test();
 void show_test2();
 void show_devs_center();
 void show_devs_02();
-void show_devs_3();
-void show_devs_6();
-void show_devs_9();
-void show_devs_11();
-void show_devs_14();
-void show_devs_16();
-void show_devs_18();
-void show_devs_20();
-void show_devs_21();
+//void show_devs_3();
+//void show_devs_6();
+//void show_devs_9();
+//void show_devs_11();
+//void show_devs_14();
+//void show_devs_16();
+//void show_devs_18();
+//void show_devs_20();
+//void show_devs_21();
 void show_dev_set();
 void show_sys_set();
 void show_message();
@@ -361,18 +361,18 @@ void Menu_init()
 	SET_MENU(NET_TEST2_MENU_screen,	show_net_test2,		EMenuNetTest2,	0,	EMenuNetTest2)
 
 	SET_MENU(NET_MENU_02_screen,	show_devs_02,	    	EMenuSHPZ_02,	0,	EMenuSHPZ_02)
-	SET_MENU(NET_MENU_3_screen,	    show_devs_3,    	   	EMenuSHPZ_3,	0,	EMenuSHPZ_3)
-	SET_MENU(NET_MENU_6_screen,	    show_devs_6,	    	EMenuSHPZ_6,	0,	EMenuSHPZ_6)
-	SET_MENU(NET_MENU_9_screen,	    show_devs_9,	    	EMenuSHPZ_9,	0,	EMenuSHPZ_9)
-	SET_MENU(NET_MENU_11_screen,	show_devs_11,	    	EMenuSHPZ_11,	0,	EMenuSHPZ_11)
-
-	SET_MENU(NET_MENU_14_screen,	show_devs_14,	    	EMenuSHPZ_14,	0,	EMenuSHPZ_14)
-	SET_MENU(NET_MENU_16_screen,	show_devs_16,       	EMenuSHPZ_16,	0,	EMenuSHPZ_16)
-	SET_MENU(NET_MENU_18_screen,	show_devs_18,        	EMenuSHPZ_18,	0,	EMenuSHPZ_18)
-	SET_MENU(NET_MENU_20_screen,	show_devs_20,	    	EMenuSHPZ_20,	0,	EMenuSHPZ_20)
-	SET_MENU(NET_MENU_21_screen,	show_devs_21,	    	EMenuSHPZ_21,	0,	EMenuSHPZ_21)
-
-	SET_MENU(NET_MENU_CENTER_screen,show_devs_center,	    	EMenuCSHPZ,	    0,	EMenuCSHPZ)
+//	SET_MENU(NET_MENU_3_screen,	    show_devs_3,    	   	EMenuSHPZ_3,	0,	EMenuSHPZ_3)
+//	SET_MENU(NET_MENU_6_screen,	    show_devs_6,	    	EMenuSHPZ_6,	0,	EMenuSHPZ_6)
+//	SET_MENU(NET_MENU_9_screen,	    show_devs_9,	    	EMenuSHPZ_9,	0,	EMenuSHPZ_9)
+//	SET_MENU(NET_MENU_11_screen,	show_devs_11,	    	EMenuSHPZ_11,	0,	EMenuSHPZ_11)
+//
+//	SET_MENU(NET_MENU_14_screen,	show_devs_14,	    	EMenuSHPZ_14,	0,	EMenuSHPZ_14)
+//	SET_MENU(NET_MENU_16_screen,	show_devs_16,       	EMenuSHPZ_16,	0,	EMenuSHPZ_16)
+//	SET_MENU(NET_MENU_18_screen,	show_devs_18,        	EMenuSHPZ_18,	0,	EMenuSHPZ_18)
+//	SET_MENU(NET_MENU_20_screen,	show_devs_20,	    	EMenuSHPZ_20,	0,	EMenuSHPZ_20)
+//	SET_MENU(NET_MENU_21_screen,	show_devs_21,	    	EMenuSHPZ_21,	0,	EMenuSHPZ_21)
+//
+//	SET_MENU(NET_MENU_CENTER_screen,show_devs_center,	    	EMenuCSHPZ,	    0,	EMenuCSHPZ)
 
 
 	cur_menu=0;

@@ -284,11 +284,11 @@ int main()
 */
 
     data_for_slave02.head.size=sizeof(NET_INPUT_STRUCT1);
-	data_for_slave02.head.adr=0x55;
+	data_for_slave02.head.adr=0x57;
 	data_for_slave02.head.cmd='d';
 
 	data_from_slave02.head.size=sizeof(NET_OUTPUT_STRUCT1);
-	data_from_slave02.head.adr=0x55;
+	data_from_slave02.head.adr=0x57;
 	data_from_slave02.head.cmd='d';
 
 	data_for_slave3.head.size=sizeof(NET_INPUT_STRUCT1);

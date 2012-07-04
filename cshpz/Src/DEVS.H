@@ -10,15 +10,15 @@
 
 	#include "CSHPZ.h"
     #include "SHPZ_02.h"
-    #include "SHPZ_3.h"
-    #include "SHPZ_6.h"
-    #include "SHPZ_9.h"
-    #include "SHPZ_11.h"
-    #include "SHPZ_14.h"
-    #include "SHPZ_16.h"
-    #include "SHPZ_18.h"
-    #include "SHPZ_20.h"
-    #include "SHPZ_21.h"
+//    #include "SHPZ_3.h"
+//    #include "SHPZ_6.h"
+//    #include "SHPZ_9.h"
+//    #include "SHPZ_11.h"
+//    #include "SHPZ_14.h"
+//    #include "SHPZ_16.h"
+//    #include "SHPZ_18.h"
+//    #include "SHPZ_20.h"
+//    #include "SHPZ_21.h"
 
     // OPTIONS defines
     #define OPT_CHECK_PRESS	0x8000 //перевірка перепаду тиску

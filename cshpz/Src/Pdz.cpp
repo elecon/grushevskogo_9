@@ -172,107 +172,107 @@ extern KOGT <0+80*0,5+32*1,       5,                               OPT_CHECK_OS,
 
 void Pdz1_stop()
 {
-	switch(Pdz1.sub_st)
-	{
-		case 0://останов вентилятора
-            KPD01.auto_close();
-            KPD02.auto_close();
-            KPD11.auto_close();
-            KPD12.auto_close();
-			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
-				Pdz1.to_stad(PDZ_ST_STOP,1);
-		break;
-		case 1://останов вентилятора
-            PP001.auto_close();
-			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
-				Pdz1.to_stad(PDZ_ST_STOP,2);
-		break;
-		case 2://останов вентилятора
-            PP01.auto_close();
-			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
-				Pdz1.to_stad(PDZ_ST_STOP,3);
-		break;
-		case 3://останов вентилятора
-			PP1.auto_close();
-			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
-				Pdz1.to_stad(PDZ_ST_STOP,4);
-		break;
-		case 4://останов вентилятора
-			VZK0.auto_close();
-			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
-				Pdz1.to_stad(PDZ_ST_STOP,5);
-		break;
-		case 5://останов вентилятора
-			VZK1.auto_close();
-			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
-				Pdz1.to_stad(PDZ_ST_STOP,6);
-		break;
-		case 6://останов вентилятора
-			ZOV0.auto_close();
-			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
-				Pdz1.to_stad(PDZ_ST_STOP,7);
-		break;
-		case 7://останов вентилятора
-			ZOV1.auto_close();
-			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
-				Pdz1.to_stad(PDZ_ST_STOP,8);
-		break;
-		case 8://полный останов
-		break;
-   }
+//	switch(Pdz1.sub_st)
+//	{
+//		case 0://останов вентилятора
+//            KPD01.auto_close();
+//            KPD02.auto_close();
+//            KPD11.auto_close();
+//            KPD12.auto_close();
+//			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
+//				Pdz1.to_stad(PDZ_ST_STOP,1);
+//		break;
+//		case 1://останов вентилятора
+//            PP001.auto_close();
+//			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
+//				Pdz1.to_stad(PDZ_ST_STOP,2);
+//		break;
+//		case 2://останов вентилятора
+//            PP01.auto_close();
+//			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
+//				Pdz1.to_stad(PDZ_ST_STOP,3);
+//		break;
+//		case 3://останов вентилятора
+//			PP1.auto_close();
+//			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
+//				Pdz1.to_stad(PDZ_ST_STOP,4);
+//		break;
+//		case 4://останов вентилятора
+//			VZK0.auto_close();
+//			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
+//				Pdz1.to_stad(PDZ_ST_STOP,5);
+//		break;
+//		case 5://останов вентилятора
+//			VZK1.auto_close();
+//			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
+//				Pdz1.to_stad(PDZ_ST_STOP,6);
+//		break;
+//		case 6://останов вентилятора
+//			ZOV0.auto_close();
+//			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
+//				Pdz1.to_stad(PDZ_ST_STOP,7);
+//		break;
+//		case 7://останов вентилятора
+//			ZOV1.auto_close();
+//			if(Pdz1.read_t_sub_st()>1)//переход через 3 сек
+//				Pdz1.to_stad(PDZ_ST_STOP,8);
+//		break;
+//		case 8://полный останов
+//		break;
+//   }
 
 }
 
 
 void Pdz1_work()
 {
-	switch(Pdz1.sub_st)
-	{
-		case 0:
-		    if (fire_floor1==0) KPD01.auto_open();
-			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,1);
-		break;
-		case 1:
-			if (fire_floor1==0) KPD02.auto_open();
-			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,2);
-		break;
-		case 2:
-			if (fire_floor1==1) KPD11.auto_open();
-			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,3);
-		break;
-		case 3:
-			if (fire_floor1==1) KPD12.auto_open();
-			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,4);
-		break;
-		case 4:
-			ZOV0.auto_open();
-			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,5);
-		break;
-		case 5:
-			ZOV1.auto_open();
-			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,6);
-		break;
-		case 6:
-			VZK0.auto_open();
-			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,7);
-		break;
-		case 7:
-			VZK1.auto_open();
-			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,8);
-		break;
-		case 8:
-            PP001.auto_open();
-			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,9);
-		break;
-        case 9:
-            PP01.auto_open();
-			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,10);
-		break;
-		case 10:
-            PP1.auto_open();
-			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,0);
-		break;
-	}
+//	switch(Pdz1.sub_st)
+//	{
+//		case 0:
+//		    if (fire_floor1==0) KPD01.auto_open();
+//			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,1);
+//		break;
+//		case 1:
+//			if (fire_floor1==0) KPD02.auto_open();
+//			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,2);
+//		break;
+//		case 2:
+//			if (fire_floor1==1) KPD11.auto_open();
+//			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,3);
+//		break;
+//		case 3:
+//			if (fire_floor1==1) KPD12.auto_open();
+//			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,4);
+//		break;
+//		case 4:
+//			ZOV0.auto_open();
+//			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,5);
+//		break;
+//		case 5:
+//			ZOV1.auto_open();
+//			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,6);
+//		break;
+//		case 6:
+//			VZK0.auto_open();
+//			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,7);
+//		break;
+//		case 7:
+//			VZK1.auto_open();
+//			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,8);
+//		break;
+//		case 8:
+//            PP001.auto_open();
+//			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,9);
+//		break;
+//        case 9:
+//            PP01.auto_open();
+//			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,10);
+//		break;
+//		case 10:
+//            PP1.auto_open();
+//			if(Pdz1.read_t_sub_st()>Pdz_set[0].value)	Pdz1.to_stad(PDZ_ST_WORK,0);
+//		break;
+//	}
 
 }
 

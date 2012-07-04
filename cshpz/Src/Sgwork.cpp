@@ -78,28 +78,28 @@ uint8_t* NET_LED[]=
     (uint8_t*)&mSHPZ21,
 };
 
-extern void Shpz_Center_Ind();
+//extern void Shpz_Center_Ind();
 extern void Shpz_02_Ind();
-extern void Shpz_3_Ind();
-extern void Shpz_6_Ind();
-extern void Shpz_9_Ind();
-extern void Shpz_11_Ind();
-extern void Shpz_14_Ind();
-extern void Shpz_16_Ind();
-extern void Shpz_18_Ind();
+//extern void Shpz_3_Ind();
+//extern void Shpz_6_Ind();
+//extern void Shpz_9_Ind();
+//extern void Shpz_11_Ind();
+//extern void Shpz_14_Ind();
+//extern void Shpz_16_Ind();
+//extern void Shpz_18_Ind();
 void all_ind()
 {
 	if (!sec_tik) mReady^=0xf0;//лампочка "Готов"
 
-    Shpz_Center_Ind();
+//    Shpz_Center_Ind();
     Shpz_02_Ind();
-    Shpz_3_Ind();
-    Shpz_6_Ind();
-    Shpz_9_Ind();
-    Shpz_11_Ind();
-    Shpz_14_Ind();
-    Shpz_16_Ind();
-    Shpz_18_Ind();
+//    Shpz_3_Ind();
+//    Shpz_6_Ind();
+//    Shpz_9_Ind();
+//    Shpz_11_Ind();
+//    Shpz_14_Ind();
+//    Shpz_16_Ind();
+//    Shpz_18_Ind();
 
     for (i=0;i<NUM_OF_SCAF;i++) {
         if (net_fl&(1<<i)) *NET_LED[i]=red_lamp; else *NET_LED[i]=green_lamp;
@@ -205,26 +205,26 @@ uint16_t* FIRE_FLAGS[]=
     (uint16_t*)&data_for_slave20.flag,
     (uint16_t*)&data_for_slave21.flag,
 };
-extern void Shpz_Center_Work();
+//extern void Shpz_Center_Work();
 //extern void Shpz_3_StopPdz();
 extern void Shpz_02_Work();
 extern void Shpz_02_StopPdz();
-extern void Shpz_3_Work();
-extern void Shpz_3_StopPdz();
-extern void Shpz_6_Work();
-extern void Shpz_6_StopPdz();
-extern void Shpz_9_Work();
-extern void Shpz_9_StopPdz();
-extern void Shpz_11_Work();
-extern void Shpz_11_StopPdz();
-extern void Shpz_14_Work();
-extern void Shpz_14_StopPdz();
-extern void Shpz_16_Work();
-extern void Shpz_16_StopPdz();
-extern void Shpz_18_Work();
-extern void Shpz_18_StopPdz();
-extern void Shpz_20_Work();
-extern void Shpz_20_StopPdz();
+//extern void Shpz_3_Work();
+//extern void Shpz_3_StopPdz();
+//extern void Shpz_6_Work();
+//extern void Shpz_6_StopPdz();
+//extern void Shpz_9_Work();
+//extern void Shpz_9_StopPdz();
+//extern void Shpz_11_Work();
+//extern void Shpz_11_StopPdz();
+//extern void Shpz_14_Work();
+//extern void Shpz_14_StopPdz();
+//extern void Shpz_16_Work();
+//extern void Shpz_16_StopPdz();
+//extern void Shpz_18_Work();
+//extern void Shpz_18_StopPdz();
+//extern void Shpz_20_Work();
+//extern void Shpz_20_StopPdz();
 
 void Work_drv()
 {
@@ -290,14 +290,14 @@ void Work_drv()
                 }
                 fire_floor=0xff;
                 Shpz_02_StopPdz();
-                Shpz_3_StopPdz();
-                Shpz_6_StopPdz();
-                Shpz_9_StopPdz();
-                Shpz_11_StopPdz();
-                Shpz_14_StopPdz();
-                Shpz_16_StopPdz();
-                Shpz_18_StopPdz();
-                Shpz_20_StopPdz();
+//                Shpz_3_StopPdz();
+//                Shpz_6_StopPdz();
+//                Shpz_9_StopPdz();
+//                Shpz_11_StopPdz();
+//                Shpz_14_StopPdz();
+//                Shpz_16_StopPdz();
+//                Shpz_18_StopPdz();
+//                Shpz_20_StopPdz();
             }
             else {
                 for(i=0;i<10;i++){
@@ -362,16 +362,16 @@ void Work_drv()
                     }
                 }
             }
-            Shpz_Center_Work();
+//            Shpz_Center_Work();
             Shpz_02_Work();
-            Shpz_3_Work();
-            Shpz_6_Work();
-            Shpz_9_Work();
-            Shpz_11_Work();
-            Shpz_14_Work();
-            Shpz_16_Work();
-            Shpz_18_Work();
-            Shpz_20_Work();
+//            Shpz_3_Work();
+//            Shpz_6_Work();
+//            Shpz_9_Work();
+//            Shpz_11_Work();
+//            Shpz_14_Work();
+//            Shpz_16_Work();
+//            Shpz_18_Work();
+//            Shpz_20_Work();
 
             if ((!(fire_floor==0xff))||(fire_fl&FIRE_FL_M_ALL)) {
                 for(i=0;i<10;i++){

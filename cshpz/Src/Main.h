@@ -27,7 +27,7 @@
 	#define SOUND		0x20
 	#define SOUND_KEY	0x40
 
-	#define NUM_OF_SCAF 10
+	#define NUM_OF_SCAF 1
 	#define ZSUV 1
 
 

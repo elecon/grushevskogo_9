@@ -26,12 +26,12 @@ const prog_char strVZK_0[]="ÂÇÊ0";
 const prog_char strVZK_1[]="ÂÇÊ1";
 const prog_char strVZK_2[]="ÂÇÊ2";
 const prog_char strVZK_3[]="ÂÇÊ3";
-
+extern KOG_NET KPD21 XBSS;
 KOG_NET KPD21   (strV_2,
                 (uint8_t*)&data_from_slave02.devs_net_stat[0],
                 (uint8_t*)&data_for_slave02.devs_net_cmd[0],
                 (uint8_t*)&mRRR,
-                 0);
+                 0) ;
 //ZOVT_NET <74+80*17,strZOV_0,&data_from_slave02,&data_for_slave02,0,NET_WORK_SHPZ02> ZOV_0;
 //KOGT_NET <0+80*0,strVZK_0,&data_from_slave02,&data_for_slave02,1,NET_WORK_SHPZ02> VZK_0;
 //

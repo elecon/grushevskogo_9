@@ -2,7 +2,7 @@
 #include "../../Devs/Dev_zov_t.h"
 #include "../../Devs/Dev_moe.h"
 #include "../../Devs/Dev_kog.h"
-#include "Dev_KD.h"
+//#include "Dev_KD.h"
 //#include "Dev_VZK.h"
 #include <avr/delay.h>
 #include "Nls.h"

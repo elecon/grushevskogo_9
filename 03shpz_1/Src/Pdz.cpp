@@ -148,8 +148,8 @@ extern uint16_t fire_sb;
 extern uint16_t fire_net;
 uint16_t fire_zone;
 //#include "Dev_kog.h"
-#include "Dev_VZK.h"
-#include "Dev_KD.h"
+//#include "Dev_VZK.h"
+//#include "Dev_KD.h"
 //extern KOG VD;
 //extern KD KD1,KD2,KD3,KD4;
 //extern VZK GR1,GR2,GR3,GR4,GR5,GR6,GR7,GR8;

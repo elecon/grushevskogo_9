@@ -30,10 +30,6 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="Src/DEVS.H" />
-		<Unit filename="Src/Dev_KD.cpp" />
-		<Unit filename="Src/Dev_KD.h" />
-		<Unit filename="Src/Dev_VZK.cpp" />
-		<Unit filename="Src/Dev_VZK.h" />
 		<Unit filename="Src/Devs.cpp" />
 		<Unit filename="Src/Etaz.cpp" />
 		<Unit filename="Src/Etaz.h" />

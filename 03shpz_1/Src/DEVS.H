@@ -6,7 +6,7 @@
 
 	#include "TechObj.h"
 	#include "Menu.h"
-	#include "Dev_VZK.h"
+	//#include "Dev_VZK.h"
     // OPTIONS defines
     #define OPT_CHECK_PRESS	0x8000 //перевірка перепаду тиску
 	#define OPT_CHECK_MP	0x4000 //перевірка стану магнітного пускача

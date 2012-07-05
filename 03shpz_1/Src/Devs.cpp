@@ -7,12 +7,12 @@
 #include <avr/delay.h>
 #include "Nls.h"
 
-#define NUM_OF_DEVS 1
+#define NUM_OF_DEVS 2
 
 extern NET_OUTPUT_STRUCT1 data_from_slave1;
 extern NET_INPUT_STRUCT1 data_for_slave1;
 
-extern const prog_char dev_name_str[][5] PROGMEM;
+
 #define MSK_NUMER_MOE 2
 extern const prog_char dev_name_str_moe[] PROGMEM;
 const prog_char dev_name_str_moe[] = "GR1";
@@ -39,7 +39,7 @@ const prog_char strVZK3[]="ВЗК4";
 
 
 extern uint8_t scafe_net;
-const uint8_t Dev_constr_info[]={
+const uint16_t Dev_constr_info[]={
     OPT_CHECK_OS|OPT_CHECK_MP,
     OPT_CHECK_OS|OPT_CHECK_MP,
     OPT_CHECK_OS|OPT_CHECK_MP,
@@ -91,8 +91,8 @@ const uint8_t Dev_constr_info[]={
 };
 const uint8_t Dev_constr[][6]={
 //  led     MT      OS      dP      mp      ktr
-    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
-    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,  36   ,   0   ,   0   ,   0   ,
+    32  ,   1   ,   1   ,   0   ,   0   ,   0   ,
     32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
     32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
     32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
@@ -154,17 +154,19 @@ KOG Dev1						//клас місцевих пристроїв
 	0,						//контроль стану магнітного пускача
 	0);						//контроль стану теплового реле
 
+KogNum Dev2(1);
 
 TDevObject* pDevs_arr[]=
 {
 	&Dev1,
+	&Dev2,
 
 };
 //extern const prog_char dev_name_str[][5] PROGMEM;
 const prog_char dev_name_str[][5]=
 {
 	"Гр1",
-	"Гр1",
+	"Гр2",
 	"Гр1",
 	"Гр1",
 	"Гр1",

@@ -56,6 +56,7 @@
 			uint8_t cmd;
 			const prog_char *name;
 
+
 			uint8_t t_repit_counter;
             uint8_t t_kog_wait;
 
@@ -81,6 +82,33 @@
 					uint8_t* _os,
 					uint8_t* _mp,
 					uint8_t* _ktr);
+	};
+
+	class KogNum: public TDevObject
+	{
+		public:
+			uint16_t enh_info;
+			uint8_t num;
+
+
+			uint8_t t_repit_counter;
+            uint8_t t_kog_wait;
+
+			uint16_t t_wait_press;
+			uint16_t t_wait_press_counter;
+			uint16_t t_wait_mp;
+			uint16_t t_wait_mp_counter;
+			void drv();
+			void show_mnem();
+			void show_lcd();
+			void check_press();
+			void check_mp();
+			void check_ktr();
+			void check_os();
+			void auto_open();
+			void auto_close();
+			KogNum();
+			KogNum(uint8_t _num);
 	};
 
     class KOG_NET: public TDevObject

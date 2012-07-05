@@ -15,6 +15,9 @@
 	extern uint8_t sec_tik;
 
 	//typedef char[5] devMoeString;
+	extern const uint16_t Dev_constr_info[];
+	extern const uint8_t Dev_constr[][6];
+	extern const prog_char dev_name_str[][5] PROGMEM;
 
 	//extern XZ moe;
 	extern const prog_char stad_str[4][3] PROGMEM;

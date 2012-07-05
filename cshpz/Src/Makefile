@@ -28,7 +28,7 @@ vpath %.cpp ../../Devs
 OBJ = main.o OS_Kernel.o OS_Services.o Usrlib.o OS_Target_cpp.o OS_Target_asm.o \
 		Peripheral.o Uart.o Iic.o TechObj.o Devs.o Menu.o Pdz.o \
 		Test.o Sgwork.o Dev_VZK.o \
-		Dev_kog_net.o \
+		Dev_kog.o \
 		SHPZ_02.o
 #		CSHPZ.o \
 #		SHPZ_3.o SHPZ_6.o SHPZ_9.o \

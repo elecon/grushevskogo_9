@@ -83,25 +83,24 @@
 					uint8_t* _ktr);
 	};
 
-//	class KOG_NET: public TDevObject
-//	{
-//		public:
-//            uint8_t *net_stan;
-//            uint8_t *net_stad;
-//            uint8_t *mn_os;
-//            //uint8_t num;
-//			const prog_char *name;
-//			void drv();
-//			void show_mnem();
-//			void show_lcd();
-//
-//			KOG_NET();
-//			KOG_NET(const prog_char* _name,
-//					uint8_t* _net_stan,
-//					uint8_t* _net_stad,
-//					uint8_t* _mn_os//,
-//					//uint8_t _num
-//					);
-//	};
+    class KOG_NET: public TDevObject
+	{
+		public:
+            uint8_t *net_stan;
+            uint8_t *net_stad;
+            uint8_t *mn_os;
+            uint8_t num;
+			const prog_char *name;
+			void drv();
+			void show_mnem();
+			void show_lcd();
+
+			KOG_NET();
+			KOG_NET (const prog_char* _name,
+					uint8_t* _net_stan,
+					uint8_t* _net_stad,
+					uint8_t* _mn_os,
+					uint8_t _num);
+	};
 
 #endif

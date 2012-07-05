@@ -2,7 +2,7 @@
 #include "../../Devs/Dev_kog_t.h"
 #include "../../Devs/Dev_moe.h"
 #include "../../Devs/Dev_zov_t.h"
-#include "../../Devs/Dev_kog_net.h"
+#include "../../Devs/Dev_kog.h"
 
 extern uint16_t fire_fl;
 extern uint8_t fire_floor;

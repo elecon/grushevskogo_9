@@ -34,203 +34,11 @@ uint8_t LampMirg;
 
 extern SysTime time;
 
-#if s03shpz_1
-uint8_t* VZK_arr[][3]=
-{
-    (uint8_t*)&mVZK_1_1,           (uint8_t*)&kVZK_1_1,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_2,           (uint8_t*)&kVZK_1_2,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_3,           (uint8_t*)&kVZK_1_3,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_4,           (uint8_t*)&kVZK_1_4,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_5,           (uint8_t*)&kVZK_1_5,           (uint8_t*)&OP_VZK_GR1,
-
-    (uint8_t*)&mVZK_1_6,           (uint8_t*)&kVZK_1_6,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_7,           (uint8_t*)&kVZK_1_7,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_8,           (uint8_t*)&kVZK_1_8,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_9,           (uint8_t*)&kVZK_1_9,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_10,          (uint8_t*)&kVZK_1_10,          (uint8_t*)&OP_VZK_GR1,
-
-    (uint8_t*)&mVZK_1_11,          (uint8_t*)&kVZK_1_11,          (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_12,          (uint8_t*)&kVZK_1_12,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_13,          (uint8_t*)&kVZK_1_13,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_14,          (uint8_t*)&kVZK_1_14,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_15,          (uint8_t*)&kVZK_1_15,          (uint8_t*)&OP_VZK_GR2,
-
-    (uint8_t*)&mVZK_1_16,          (uint8_t*)&kVZK_1_16,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_17,          (uint8_t*)&kVZK_1_17,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_18,          (uint8_t*)&kVZK_1_18,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_19,          (uint8_t*)&kVZK_1_19,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_20,          (uint8_t*)&kVZK_1_20,          (uint8_t*)&OP_VZK_GR2,
-
-    (uint8_t*)&mVZK_1_21,          (uint8_t*)&kVZK_1_21,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_22,          (uint8_t*)&kVZK_1_22,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_23,          (uint8_t*)&kVZK_1_23,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_24,          (uint8_t*)&kVZK_1_24,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_25,          (uint8_t*)&kVZK_1_25,          (uint8_t*)&OP_VZK_GR3,
-
-    (uint8_t*)&mVZK_1_26,          (uint8_t*)&kVZK_1_26,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_27,          (uint8_t*)&kVZK_1_27,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_28,          (uint8_t*)&kVZK_1_28,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_29,          (uint8_t*)&kVZK_1_29,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_30,          (uint8_t*)&kVZK_1_30,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_31,          (uint8_t*)&kVZK_1_31,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_32,          (uint8_t*)&kVZK_1_32,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_33,          (uint8_t*)&kVZK_1_33,          (uint8_t*)&OP_VZK_GR3,
-    //
-    (uint8_t*)&mVZK_1_34,          (uint8_t*)&kVZK_1_34,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_35,          (uint8_t*)&kVZK_1_35,          (uint8_t*)&OP_VZK_GR3,
-};
-#endif
-#if SHPZ_6
-uint8_t* VZK_arr[][3]=
-{
-    (uint8_t*)&mVZK_1_1,           (uint8_t*)&kVZK_1_1,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_2,           (uint8_t*)&kVZK_1_2,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_3,           (uint8_t*)&kVZK_1_3,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_4,           (uint8_t*)&kVZK_1_4,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_5,           (uint8_t*)&kVZK_1_5,           (uint8_t*)&OP_VZK_GR1,
-
-    (uint8_t*)&mVZK_1_6,           (uint8_t*)&kVZK_1_6,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_7,           (uint8_t*)&kVZK_1_7,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_8,           (uint8_t*)&kVZK_1_8,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_9,           (uint8_t*)&kVZK_1_9,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_10,          (uint8_t*)&kVZK_1_10,          (uint8_t*)&OP_VZK_GR1,
-
-    (uint8_t*)&mVZK_1_11,          (uint8_t*)&kVZK_1_11,          (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_12,          (uint8_t*)&kVZK_1_12,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_13,          (uint8_t*)&kVZK_1_13,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_14,          (uint8_t*)&kVZK_1_14,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_15,          (uint8_t*)&kVZK_1_15,          (uint8_t*)&OP_VZK_GR2,
-
-    (uint8_t*)&mVZK_1_16,          (uint8_t*)&kVZK_1_16,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_17,          (uint8_t*)&kVZK_1_17,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_18,          (uint8_t*)&kVZK_1_18,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_19,          (uint8_t*)&kVZK_1_19,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_20,          (uint8_t*)&kVZK_1_20,          (uint8_t*)&OP_VZK_GR2,
-
-    (uint8_t*)&mVZK_1_21,          (uint8_t*)&kVZK_1_21,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_22,          (uint8_t*)&kVZK_1_22,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_23,          (uint8_t*)&kVZK_1_23,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_24,          (uint8_t*)&kVZK_1_24,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_25,          (uint8_t*)&kVZK_1_25,          (uint8_t*)&OP_VZK_GR3,
-
-    (uint8_t*)&mVZK_1_26,          (uint8_t*)&kVZK_1_26,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_27,          (uint8_t*)&kVZK_1_27,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_28,          (uint8_t*)&kVZK_1_28,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_29,          (uint8_t*)&kVZK_1_29,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_30,          (uint8_t*)&kVZK_1_30,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_31,          (uint8_t*)&kVZK_1_31,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_32,          (uint8_t*)&kVZK_1_32,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_33,          (uint8_t*)&kVZK_1_33,          (uint8_t*)&OP_VZK_GR3,
-    //
-    (uint8_t*)&mVZK_1_34,          (uint8_t*)&kVZK_1_34,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_35,          (uint8_t*)&kVZK_1_35,          (uint8_t*)&OP_VZK_GR3,
-};
-#endif
-#if SHPZ_9
-uint8_t* VZK_arr[][3]=
-{
-    (uint8_t*)&mVZK_1_1,           (uint8_t*)&kVZK_1_1,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_2,           (uint8_t*)&kVZK_1_2,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_3,           (uint8_t*)&kVZK_1_3,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_4,           (uint8_t*)&kVZK_1_4,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_5,           (uint8_t*)&kVZK_1_5,           (uint8_t*)&OP_VZK_GR1,
-
-    (uint8_t*)&mVZK_1_6,           (uint8_t*)&kVZK_1_6,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_7,           (uint8_t*)&kVZK_1_7,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_8,           (uint8_t*)&kVZK_1_8,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_9,           (uint8_t*)&kVZK_1_9,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_10,          (uint8_t*)&kVZK_1_10,          (uint8_t*)&OP_VZK_GR1,
-
-    (uint8_t*)&mVZK_1_11,          (uint8_t*)&kVZK_1_11,          (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_12,          (uint8_t*)&kVZK_1_12,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_13,          (uint8_t*)&kVZK_1_13,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_14,          (uint8_t*)&kVZK_1_14,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_15,          (uint8_t*)&kVZK_1_15,          (uint8_t*)&OP_VZK_GR2,
-
-    (uint8_t*)&mVZK_1_16,          (uint8_t*)&kVZK_1_16,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_17,          (uint8_t*)&kVZK_1_17,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_18,          (uint8_t*)&kVZK_1_18,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_19,          (uint8_t*)&kVZK_1_19,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_20,          (uint8_t*)&kVZK_1_20,          (uint8_t*)&OP_VZK_GR2,
-
-    (uint8_t*)&mVZK_1_21,          (uint8_t*)&kVZK_1_21,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_22,          (uint8_t*)&kVZK_1_22,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_23,          (uint8_t*)&kVZK_1_23,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_24,          (uint8_t*)&kVZK_1_24,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_25,          (uint8_t*)&kVZK_1_25,          (uint8_t*)&OP_VZK_GR3,
-
-    (uint8_t*)&mVZK_1_26,          (uint8_t*)&kVZK_1_26,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_27,          (uint8_t*)&kVZK_1_27,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_28,          (uint8_t*)&kVZK_1_28,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_29,          (uint8_t*)&kVZK_1_29,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_30,          (uint8_t*)&kVZK_1_30,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_31,          (uint8_t*)&kVZK_1_31,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_32,          (uint8_t*)&kVZK_1_32,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_33,          (uint8_t*)&kVZK_1_33,          (uint8_t*)&OP_VZK_GR3,
-    //
-    (uint8_t*)&mVZK_1_34,          (uint8_t*)&kVZK_1_34,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_35,          (uint8_t*)&kVZK_1_35,          (uint8_t*)&OP_VZK_GR3,
-};
-#endif
-#if SHPZ_14
-uint8_t* VZK_arr[][3]=
-{
-    (uint8_t*)&mVZK_1_1,           (uint8_t*)&kVZK_1_1,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_2,           (uint8_t*)&kVZK_1_2,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_3,           (uint8_t*)&kVZK_1_3,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_4,           (uint8_t*)&kVZK_1_4,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_5,           (uint8_t*)&kVZK_1_5,           (uint8_t*)&OP_VZK_GR1,
-
-    (uint8_t*)&mVZK_1_6,           (uint8_t*)&kVZK_1_6,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_7,           (uint8_t*)&kVZK_1_7,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_8,           (uint8_t*)&kVZK_1_8,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_9,           (uint8_t*)&kVZK_1_9,           (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_10,          (uint8_t*)&kVZK_1_10,          (uint8_t*)&OP_VZK_GR1,
-
-    (uint8_t*)&mVZK_1_11,          (uint8_t*)&kVZK_1_11,          (uint8_t*)&OP_VZK_GR1,
-    (uint8_t*)&mVZK_1_12,          (uint8_t*)&kVZK_1_12,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_13,          (uint8_t*)&kVZK_1_13,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_14,          (uint8_t*)&kVZK_1_14,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_15,          (uint8_t*)&kVZK_1_15,          (uint8_t*)&OP_VZK_GR2,
-
-    (uint8_t*)&mVZK_1_16,          (uint8_t*)&kVZK_1_16,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_17,          (uint8_t*)&kVZK_1_17,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_18,          (uint8_t*)&kVZK_1_18,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_19,          (uint8_t*)&kVZK_1_19,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_20,          (uint8_t*)&kVZK_1_20,          (uint8_t*)&OP_VZK_GR2,
-
-    (uint8_t*)&mVZK_1_21,          (uint8_t*)&kVZK_1_21,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_22,          (uint8_t*)&kVZK_1_22,          (uint8_t*)&OP_VZK_GR2,
-    (uint8_t*)&mVZK_1_23,          (uint8_t*)&kVZK_1_23,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_24,          (uint8_t*)&kVZK_1_24,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_25,          (uint8_t*)&kVZK_1_25,          (uint8_t*)&OP_VZK_GR3,
-
-    (uint8_t*)&mVZK_1_26,          (uint8_t*)&kVZK_1_26,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_27,          (uint8_t*)&kVZK_1_27,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_28,          (uint8_t*)&kVZK_1_28,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_29,          (uint8_t*)&kVZK_1_29,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_30,          (uint8_t*)&kVZK_1_30,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_31,          (uint8_t*)&kVZK_1_31,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_32,          (uint8_t*)&kVZK_1_32,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_33,          (uint8_t*)&kVZK_1_33,          (uint8_t*)&OP_VZK_GR3,
-    //
-    (uint8_t*)&mVZK_1_34,          (uint8_t*)&kVZK_1_34,          (uint8_t*)&OP_VZK_GR3,
-    (uint8_t*)&mVZK_1_35,          (uint8_t*)&kVZK_1_35,          (uint8_t*)&OP_VZK_GR3,
-};
-#endif
-
 //uint32_t i;
 void all_ind()
 {
 	if (!sec_tik) mReady^=0xf0;//лампочка "Готов"
-//    for (i=0;i<(35);i++) {
-//		if (*VZK_arr[i][2]) {
-//            if (*VZK_arr[i][1]) *VZK_arr[i][0]=red_lamp; else *VZK_arr[i][0]=red_b_lamp;
-//		}
-//		else {
-//            if (*VZK_arr[i][1]) *VZK_arr[i][0]=green_b_lamp; else *VZK_arr[i][0]=green_lamp;
-//		}
-//	}
+
 
     if (((kKNOP_FLOORE_1__1)&&(kKNOP_FLOORE_1__2))) {
             mFIRE_KNOP_1=red_lamp;
@@ -533,15 +341,15 @@ void Work_drv()
 /*
 VZK view
 */
-    for(i=0;i<35;i++) {
-        //----------------------------
-        if (*VZK_arr[i][1]) {
-			data_from_slave1.VZK_FL1[i/8]|=(1<<(i%8));
-		}
-		else {
-			data_from_slave1.VZK_FL1[i/8]&=~(1<<(i%8));
-		}
-    }
+//    for(i=0;i<35;i++) {
+//        //----------------------------
+//        if (*VZK_arr[i][1]) {
+//			data_from_slave1.VZK_FL1[i/8]|=(1<<(i%8));
+//		}
+//		else {
+//			data_from_slave1.VZK_FL1[i/8]&=~(1<<(i%8));
+//		}
+//    }
 //========================================================================================
 
 	pisk_drv();

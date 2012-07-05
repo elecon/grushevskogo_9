@@ -139,43 +139,13 @@ void show_pdz_set()
 	}
 }
 
-extern NET_OUTPUT_STRUCT1 data_for_slave1;
-//extern NET_OUTPUT_STRUCT2 data_for_slave2;
 
 
 extern uint16_t fire_sps;
 extern uint16_t fire_sb;
 extern uint16_t fire_net;
 uint16_t fire_zone;
-//#include "Dev_kog.h"
-//#include "Dev_VZK.h"
-//#include "Dev_KD.h"
-//extern KOG VD;
-//extern KD KD1,KD2,KD3,KD4;
-//extern VZK GR1,GR2,GR3,GR4,GR5,GR6,GR7,GR8;
-#include "../../Devs/Dev_kog_t.h"
-#include "../../Devs/Dev_zov_t.h"
-#include "../../Devs/Dev_moe.h"
-//extern ZOVT<LED_NOMER, MSK_BIT,OUT_BIT,OPTIONS,STRING> ZOV18;
-//extern MOE <12+80*0,24+32*1,    0,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD11> KPD11;
-//extern MOE < 4+80*0,25+32*1,    1,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD12> KPD12;
-//extern MOE <50+80*0,26+32*1,    2,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD21> KPD21;
-//extern MOE <42+80*0,27+32*1,    3,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD22> KPD22;
-//extern MOE <55+80*0,28+32*1,    4,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD31> KPD31;
-//extern MOE <47+80*0,29+32*1,    5,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD32> KPD32;
-//
-//extern KOGT <19+80*0,13+32*0,  12,             OPT_CHECK_PRESS|OPT_CHECK_OS,   strPP1> PP1;
-//extern KOGT <57+80*0,14+32*0,  13,             OPT_CHECK_PRESS|OPT_CHECK_OS,   strPP2> PP2;
-//extern KOGT <62+80*0,15+32*0,  14,             OPT_CHECK_PRESS|OPT_CHECK_OS,   strPP3> PP3;
-//
-//extern ZOVT <27+80*0,5+32*1,   9, 0,                                           strZOV1> ZOV1;
-//extern ZOVT <65+80*0,5+32*1,   10, 0,                                          strZOV2> ZOV2;
-//extern ZOVT <70+80*0,5+32*1,   11, 0,                                          strZOV3> ZOV3;
-////ZOVT <73+80*0,5+32*1,   11, 0,                                          strDVR> DVR;
-//
-//extern KOGT <32+80*0,5+32*1,   6,                               OPT_CHECK_OS,  strVZK1> VZK1;
-//extern KOGT <32+80*0,5+32*1,   7,                               OPT_CHECK_OS,  strVZK2> VZK2;
-//extern KOGT <32+80*0,5+32*1,   8,                               OPT_CHECK_OS,  strVZK3> VZK3;
+
 
 
 void Pdz1_stop()

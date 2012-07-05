@@ -1133,7 +1133,7 @@ OS_INTERRUPT void Uart1Tx_ISR()
 }
 
 extern uint8_t MSK[8],OS_MT[2],MT[2];
-uint8_t MSK_FIELD[64],OS_FIELD[16],OUT_FIELD[16],LED_FIELD[NUM_OF_MNEMO*80];
+uint8_t MSK_FIELD[64],OS_FIELD[36],OUT_FIELD[36],LED_FIELD[NUM_OF_MNEMO*80];
 //uint8_t Test_MSK,TestMSKResult;
 void outconv()
 {

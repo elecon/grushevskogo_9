@@ -25,7 +25,7 @@ $IdInfo$
 	#if (__AVR_ATmega1281__||__AVR_ATmega1280__)
 		#define NUM_OF_MNEMO 18
 	#endif
-	extern uint8_t MSK_FIELD[64],OS_FIELD[16],OUT_FIELD[16],LED_FIELD[NUM_OF_MNEMO*80];
+	extern uint8_t MSK_FIELD[64],OS_FIELD[36],OUT_FIELD[36],LED_FIELD[NUM_OF_MNEMO*80];
 
 	#define red_lamp 		0xf0
 	#define green_lamp 		0x0f

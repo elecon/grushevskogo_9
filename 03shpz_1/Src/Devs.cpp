@@ -36,103 +36,118 @@ const prog_char strVZK1[]="ВЗК2";
 const prog_char strVZK2[]="ВЗК3";
 const prog_char strVZK3[]="ВЗК4";
 #endif
-#if SHPZ_6
-const prog_char strKPD11[]="КПД51";
-const prog_char strKPD12[]="КПД52";
-const prog_char strKPD21[]="КПД61";
-const prog_char strKPD22[]="КПД62";
-const prog_char strKPD31[]="КПД71";
-const prog_char strKPD32[]="КПД72";
 
-const prog_char strPP1[]="ПП5";
-const prog_char strPP2[]="ПП6";
-const prog_char strPP3[]="ПП7";
-const prog_char strZOV1[]="ЗОВ5";
-const prog_char strZOV2[]="ЗОВ6";
-const prog_char strZOV3[]="ЗОВ7";
-const prog_char strVZK1[]="ВЗК5";
-const prog_char strVZK2[]="ВЗК6";
-const prog_char strVZK3[]="ВЗК7";
-#endif
-#if SHPZ_9
-const prog_char strKPD11[]="КПД81";
-const prog_char strKPD12[]="КПД82";
-const prog_char strKPD21[]="КПД91";
-const prog_char strKPD22[]="КПД92";
-const prog_char strKPD31[]="КПД101";
-const prog_char strKPD32[]="КПД102";
-
-const prog_char strPP1[]="ПП8";
-const prog_char strPP2[]="ПП9";
-const prog_char strPP3[]="ПП10";
-const prog_char strZOV1[]="ЗОВ8";
-const prog_char strZOV2[]="ЗОВ9";
-const prog_char strZOV3[]="ЗОВ10";
-const prog_char strVZK1[]="ВЗК8";
-const prog_char strVZK2[]="ВЗК9";
-const prog_char strVZK3[]="ВЗК10";
-#endif
-#if SHPZ_14
-const prog_char strKPD11[]="КПД131";
-const prog_char strKPD12[]="КПД132";
-const prog_char strKPD21[]="КПД141";
-const prog_char strKPD22[]="КПД142";
-const prog_char strKPD31[]="КПД151";
-const prog_char strKPD32[]="КПД152";
-
-const prog_char strPP1[]="ПП13";
-const prog_char strPP2[]="ПП14";
-const prog_char strPP3[]="ПП15";
-const prog_char strZOV1[]="ЗОВ13";
-const prog_char strZOV2[]="ЗОВ14";
-const prog_char strZOV3[]="ЗОВ15";
-const prog_char strVZK1[]="ВЗК13";
-const prog_char strVZK2[]="ВЗК14";
-const prog_char strVZK3[]="ВЗК15";
-#endif
-
-//template <uint16_t LED_NOMER, uint8_t MSK_BIT,uint8_t OUT_BIT,uint16_t OPTIONS,const char *STRING>
-//    led     msk       out                     options                 str
-//MOE <12+80*0,24+32*1,    0,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD11> KPD11;
-//MOE < 4+80*0,25+32*1,    1,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD12> KPD12;
-//MOE <50+80*0,26+32*1,    2,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD21> KPD21;
-//MOE <42+80*0,27+32*1,    3,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD22> KPD22;
-//MOE <55+80*0,28+32*1,    4,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD31> KPD31;
-//MOE <47+80*0,29+32*1,    5,  OPT_CHECK_PRESS|OPT_CHECK_MP|OPT_CHECK_OS,  strKPD32> KPD32;
-//
-//KOGT <19+80*0,13+32*0,  12,             OPT_CHECK_MP|OPT_CHECK_OS,   strPP1> PP1;
-//KOGT <57+80*0,14+32*0,  13,             OPT_CHECK_MP|OPT_CHECK_OS,   strPP2> PP2;
-//KOGT <62+80*0,15+32*0,  14,             OPT_CHECK_MP|OPT_CHECK_OS,   strPP3> PP3;
-//
-//ZOVT <27+80*0,5+32*1,   9, 0,                                           strZOV1> ZOV1;
-//ZOVT <65+80*0,5+32*1,   10, 0,                                          strZOV2> ZOV2;
-//ZOVT <70+80*0,5+32*1,   11, 0,                                          strZOV3> ZOV3;
-////ZOVT <73+80*0,5+32*1,   11, 0,                                          strDVR> DVR;
-//
-//KOGT <32+80*0,5+32*1,   6,                               OPT_CHECK_OS,  strVZK1> VZK1;
-//KOGT <32+80*0,5+32*1,   7,                               OPT_CHECK_OS,  strVZK2> VZK2;
-//KOGT <32+80*0,5+32*1,   8,                               OPT_CHECK_OS,  strVZK3> VZK3;
 
 extern uint8_t scafe_net;
-
-
+const uint8_t Dev_constr_info[]={
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    //5
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    //10
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    //15
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    //20
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    //25
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    //30
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    //35
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    OPT_CHECK_OS|OPT_CHECK_MP,
+    //40
+};
+const uint8_t Dev_constr[][6]={
+//  led     MT      OS      dP      mp      ktr
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+//5 led     MT      OS      dP      mp      ktr
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+//10led     MT      OS      dP      mp      ktr
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+//15led     MT      OS      dP      mp      ktr
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+//20led     MT      OS      dP      mp      ktr
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+//25led     MT      OS      dP      mp      ktr
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+//30led     MT      OS      dP      mp      ktr
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+//35led     MT      OS      dP      mp      ktr
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+//40led     MT      OS      dP      mp      ktr
+};
 //KOG( *name, *mn_os, enh_info,	*out, *press, *os, *mp, *ktr)
-////-------------------------------------------------------------------------------------------YA6
-//VZK GR3						//клас місцевих пристроїв
-//	(dev_name_str[0],		//назва яка буде відображитися на LCD
-//	(uint8_t*)&mGR1,		//свытлодіод мнемосхеми
-//	VZK_CHECK_OS,			//статус
-//	&OP_GR1,                //вихід МТ
-//	0,						//контроль стану перепаду тиску
-//	0,				        //контроль стану зворотній зв'язок
-//	0,						//контроль стану магнітного пускача
-//	0);						//контроль стану теплового реле
+
 
 //-------------------------------------------------------------------------------------------YA6
-KOG KK1						//клас місцевих пристроїв
+KOG Dev1						//клас місцевих пристроїв
 	(dev_name_str[0],		//назва яка буде відображитися на LCD
 	(uint8_t*)&mGR1,		//свытлодіод мнемосхеми
-	OPT_CHECK_OS,			//статус
+	OPT_CHECK_OS|OPT_CHECK_MP,//статус
 	&OP_GR1,                //вихід МТ
 	0,						//контроль стану перепаду тиску
 	&OS_GR1,				//контроль стану зворотній зв'язок
@@ -142,12 +157,60 @@ KOG KK1						//клас місцевих пристроїв
 
 TDevObject* pDevs_arr[]=
 {
-	&KK1,
+	&Dev1,
+
 };
 //extern const prog_char dev_name_str[][5] PROGMEM;
 const prog_char dev_name_str[][5]=
 {
 	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+//	5
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+//	10
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+//	15
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+//	20
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+//	25
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+//	30
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+//	35
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+	"Гр1",
+//	40
 };
 
 

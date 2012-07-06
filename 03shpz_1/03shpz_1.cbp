@@ -58,6 +58,8 @@
 		<Unit filename="../Devs/Dev_kog.h" />
 		<Unit filename="../Devs/Dev_kog_t.cpp" />
 		<Unit filename="../Devs/Dev_kog_t.h" />
+		<Unit filename="../Devs/Dev_kpd.cpp" />
+		<Unit filename="../Devs/Dev_kpd.h" />
 		<Unit filename="../Devs/Dev_moe.cpp" />
 		<Unit filename="../Devs/Dev_moe.h" />
 		<Unit filename="../Devs/Dev_zov.cpp" />

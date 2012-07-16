@@ -143,24 +143,107 @@ const uint8_t Dev_constr[][6]={
 //KOG( *name, *mn_os, enh_info,	*out, *press, *os, *mp, *ktr)
 
 
-//-------------------------------------------------------------------------------------------YA6
-KOG Dev1						//клас місцевих пристроїв
-	(dev_name_str[0],		//назва яка буде відображитися на LCD
-	(uint8_t*)&mGR1,		//свытлодіод мнемосхеми
-	OPT_CHECK_OS|OPT_CHECK_MP,//статус
-	&OP_GR1,                //вихід МТ
-	0,						//контроль стану перепаду тиску
-	&OS_GR1,				//контроль стану зворотній зв'язок
-	0,						//контроль стану магнітного пускача
-	0);						//контроль стану теплового реле
+////-------------------------------------------------------------------------------------------YA6
+//KOG Dev1						//клас місцевих пристроїв
+//	(dev_name_str[0],		//назва яка буде відображитися на LCD
+//	(uint8_t*)&mGR1,		//свытлодіод мнемосхеми
+//	OPT_CHECK_OS|OPT_CHECK_MP,//статус
+//	&OP_GR1,                //вихід МТ
+//	0,						//контроль стану перепаду тиску
+//	&OS_GR1,				//контроль стану зворотній зв'язок
+//	0,						//контроль стану магнітного пускача
+//	0);						//контроль стану теплового реле
 
+KogNum Dev1(0);
 KogNum Dev2(1);
+KogNum Dev3(2);
+KogNum Dev4(3);
+KogNum Dev5(4);
+KogNum Dev6(5);
+KogNum Dev7(6);
+KogNum Dev8(7);
+KogNum Dev9(8);
+KogNum Dev10(9);
+KogNum Dev11(10);
+KogNum Dev12(11);
+KogNum Dev13(12);
+KogNum Dev14(13);
+KogNum Dev15(14);
+KogNum Dev16(15);
+KogNum Dev17(16);
+KogNum Dev18(17);
+KogNum Dev19(18);
+KogNum Dev20(19);
+KogNum Dev21(20);
+KogNum Dev22(21);
+KogNum Dev23(22);
+KogNum Dev24(23);
+KogNum Dev25(24);
+KogNum Dev26(25);
+KogNum Dev27(26);
+KogNum Dev28(27);
+KogNum Dev29(28);
+KogNum Dev30(29);
+KogNum Dev31(30);
+KogNum Dev32(31);
+KogNum Dev33(32);
+KogNum Dev34(33);
+KogNum Dev35(34);
+KogNum Dev36(35);
+KogNum Dev37(36);
+KogNum Dev38(37);
+KogNum Dev39(38);
+KogNum Dev40(39);
 
 TDevObject* pDevs_arr[]=
 {
 	&Dev1,
 	&Dev2,
+	&Dev3,
+	&Dev4,
+	&Dev5,
 
+	&Dev6,
+	&Dev7,
+	&Dev8,
+	&Dev9,
+	&Dev10,
+
+	&Dev11,
+	&Dev12,
+	&Dev13,
+	&Dev14,
+	&Dev15,
+
+	&Dev16,
+	&Dev17,
+	&Dev18,
+	&Dev19,
+	&Dev20,
+
+	&Dev21,
+	&Dev22,
+	&Dev23,
+	&Dev24,
+	&Dev25,
+
+	&Dev26,
+	&Dev27,
+	&Dev28,
+	&Dev29,
+	&Dev30,
+
+	&Dev31,
+	&Dev32,
+	&Dev33,
+	&Dev34,
+	&Dev35,
+
+	&Dev36,
+	&Dev37,
+	&Dev38,
+	&Dev39,
+	&Dev40,
 };
 //extern const prog_char dev_name_str[][5] PROGMEM;
 const prog_char dev_name_str[][5]=

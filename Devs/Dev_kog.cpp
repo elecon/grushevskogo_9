@@ -197,14 +197,14 @@
 	}
 	void KogNum::check_press()
 	{
-		if (stan&KOG_OP) {
-            if (MSK_FIELD[Dev_constr[num][3]]) t_kog_wait=T_WAIT_PRESS;
-        }
-        if (stan&KOG_CLOSE) {
-            if (!(MSK_FIELD[Dev_constr[num][3]])) t_kog_wait=T_WAIT_PRESS;
-        }
-        if(!sec_tik) if(t_kog_wait) t_kog_wait--;
-        if(!(t_kog_wait)) stan|=KOG_STAN;
+//		if (stan&KOG_OP) {
+//            if (MSK_FIELD[Dev_constr[num][3]]) t_kog_wait=T_WAIT_PRESS;
+//        }
+//        if (stan&KOG_CLOSE) {
+//            if (!(MSK_FIELD[Dev_constr[num][3]])) t_kog_wait=T_WAIT_PRESS;
+//        }
+//        if(!sec_tik) if(t_kog_wait) t_kog_wait--;
+//        if(!(t_kog_wait)) stan|=KOG_STAN;
 	}
 
 	void KogNum::check_mp()
@@ -228,41 +228,43 @@
 	void KogNum::drv()
 	{
 		if (stan&(KOG_OPER|KOG_DIST)) {
-        if (stad&(1<<KOG_ST_OPEN)) {
-            stad&=~((1<<KOG_ST_OPEN));
-            stan |= KOG_OP;
-            stan &=~ KOG_CLOSE;
-            //OUT_FIELD[OUT_BIT]=0xff;
-        }
-        if (stad&(1<<KOG_ST_CLOSE)) {
-            stad&=~(1<<KOG_ST_CLOSE);
-            stan &=~ KOG_OP;
-            stan |= KOG_CLOSE;
-            //OUT_FIELD[OUT_BIT]=0x00;
-        }
 
-        if (stad&(1<<KOG_ST_AVTO)) {
-            stad&=~(1<<KOG_ST_AVTO);
-            stan&=~(KOG_OPER|KOG_DIST);
-        }
+            if (stad&(1<<KOG_ST_OPEN)) {
+                stad&=~((1<<KOG_ST_OPEN));
+                stan |= KOG_OP;
+                stan &=~ KOG_CLOSE;
+                //OUT_FIELD[OUT_BIT]=0xff;
+            }
+            if (stad&(1<<KOG_ST_CLOSE)) {
+                stad&=~(1<<KOG_ST_CLOSE);
+                stan &=~ KOG_OP;
+                stan |= KOG_CLOSE;
+                //OUT_FIELD[OUT_BIT]=0x00;
+            }
 
-        if (stad&(1<<KOG_ST_ERR)) {
-            stad&=~(1<<KOG_ST_ERR);
-            stan&=~KOG_STAN;
-        }
-    }
-    else {
-        if (stad&(1<<KOG_ST_OPER)) {
-            stad&=~(1<<KOG_ST_OPER);
-            stan|=KOG_OPER;
-        }
-        else {
-            if (stad&(1<<KOG_ST_DIST)) {
-                stad&=~(1<<KOG_ST_DIST);
-                stan|=KOG_DIST;
+            if (stad&(1<<KOG_ST_AVTO)) {
+                stad&=~(1<<KOG_ST_AVTO);
+                stan&=~(KOG_OPER|KOG_DIST);
+            }
+
+            if (stad&(1<<KOG_ST_ERR)) {
+                stad&=~(1<<KOG_ST_ERR);
+                stan&=~KOG_STAN;
+                t_kog_wait=T_WAIT_PRESS;
             }
         }
-    }
+        else {
+            if (stad&(1<<KOG_ST_OPER)) {
+                stad&=~(1<<KOG_ST_OPER);
+                stan|=KOG_OPER;
+            }
+            else {
+                if (stad&(1<<KOG_ST_DIST)) {
+                    stad&=~(1<<KOG_ST_DIST);
+                    stan|=KOG_DIST;
+                }
+            }
+        }
     if (stan&KOG_CLOSE) OUT_FIELD[Dev_constr[num][1]]=0x00;
     else if (stan&KOG_OP) OUT_FIELD[Dev_constr[num][1]]=0xff;
 
@@ -280,7 +282,9 @@
 		t_wait_mp_counter=t_wait_mp;
 
 		t_kog_wait=50;
-        stan |= KOG_CLOSE;
+        //stan|= KOG_CLOSE;
+//        stan |= KOG_OP;
+        stad|=(1<<KOG_ST_OPEN);
 	}
 
 	void KogNum::show_mnem()
@@ -312,7 +316,7 @@
             LCD_abc((char*)auto_str,   12);//19
         }
 
-        if ((MSK_FIELD[/*Dev_constr[num][3]*/1])) LCD_abc((char*)one_str,11);
+        if ((MSK_FIELD[Dev_constr[num][4]])) LCD_abc((char*)one_str,11);
         else LCD_abc((char*)noll_str,11);
 
         if (stan&(KOG_OS_ERROR|KOG_STAN)) {
@@ -322,6 +326,7 @@
         }
         LCD_uind(stad,28,2|LEAD_ZERO);
         LCD_uind(stan,31,2|LEAD_ZERO);
+        LCD_uind(t_kog_wait,33,2|LEAD_ZERO);
 //        LCD_uind(t_kog_wait,33,2|LEAD_ZERO);
 
         if (stan&KOG_OPER) {
@@ -351,6 +356,8 @@
 	KogNum::KogNum(uint8_t _num)
 	{
         num=_num;
+        t_kog_wait=50;
+        stan|= KOG_CLOSE;
 	}
 //______________________________________________________________________________
 	void KOG_NET::drv()

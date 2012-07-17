@@ -415,7 +415,7 @@ clean_list :
 	$(REMOVEDIR) .dep
 	$(REMOVE) ../../hexout/'$(TARGET)$(VERSEP)'*.hex
 
-program:
+program: all
 	avrdude -c avrisp2 -p $(MCU) -B 0.5 -P usb -v -y -U flash:w:$(TARGET).hex
 #	$(COPY) ryba.hex g:/mrtp/
 #	$(COPY) $(TARGET).hex g:/mrtp/ryba.hex

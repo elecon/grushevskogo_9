@@ -14,10 +14,10 @@
 	void KogKpd::check_press()
 	{
 		if (stan&KPD_OP) {
-            if (OS_FIELD[Dev_constr[num][3]]) t_kog_wait=T_WAIT_PRESS;
+            if (MSK_FIELD[Dev_constr[num][3]]) t_kog_wait=T_WAIT_PRESS;
         }
         if (stan&KPD_CLOSE) {
-            if (!(OS_FIELD[Dev_constr[num][3]])) t_kog_wait=T_WAIT_PRESS;
+            if (!(MSK_FIELD[Dev_constr[num][3]])) t_kog_wait=T_WAIT_PRESS;
         }
         if(!sec_tik) if(t_kog_wait) t_kog_wait--;
         if(!(t_kog_wait)) stan|=KPD_STAN;
@@ -133,8 +133,8 @@
             if (stan&KPD_OS_ERROR)     LCD_abc((char*)os_err_str,      34);
             if (stan&KPD_STAN)   LCD_abc((char*)press_err_str,   23);//19
         }
-//        LCD_uind(stad,28,2|LEAD_ZERO);
-//        LCD_uind(stan,31,2|LEAD_ZERO);
+        LCD_uind(stad,28,2|LEAD_ZERO);
+        LCD_uind(stan,31,2|LEAD_ZERO);
 //        LCD_uind(t_kog_wait,33,2|LEAD_ZERO);
 
         if (stan&KPD_OPER) {
@@ -150,7 +150,7 @@
                     stad|=(1<<KPD_ST_CLOSE);
                 }
             }
-            if (KEY_1) stad|=(1<<KPD_ST_ERR);
+            if (KEY_1) stad|=(1<<(KPD_ST_ERR));
             if (KEY_4) {
                 stad|=(1<<KPD_ST_AVTO);
             }
@@ -211,7 +211,7 @@
             if (stan&(KPD_OS_ERROR|KPD_STAN)) {
                 LCD_abc((char*)error_str,20);
                 if (stan&KPD_OS_ERROR) LCD_abc((char*)os_err_str,      34);
-                if (stan&KPD_STAN)   LCD_abc((char*)press_err_str,   23);//19
+                if (stan&KPD_STAN)   LCD_abc((char*)stan_err_str,   23);//19
             }
 
             //LCD_uind(stad,28,2|LEAD_ZERO);

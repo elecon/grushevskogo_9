@@ -77,6 +77,9 @@
     extern const prog_char strVZK2[] PROGMEM;
     extern const prog_char strVZK3[] PROGMEM;
 
+    extern const prog_char noll_str[] PROGMEM;
+	extern const prog_char one_str[] PROGMEM;
+
 //    const prog_char strVZK1[]="ÂÇÊ1";
 //    const prog_char strVZK2[]="ÂÇÊ2";
 //    const prog_char strVZK3[]="ÂÇÊ3";

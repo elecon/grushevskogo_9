@@ -198,10 +198,10 @@
 	void KogNum::check_press()
 	{
 		if (stan&KOG_OP) {
-            if (OS_FIELD[Dev_constr[num][3]]) t_kog_wait=T_WAIT_PRESS;
+            if (MSK_FIELD[Dev_constr[num][3]]) t_kog_wait=T_WAIT_PRESS;
         }
         if (stan&KOG_CLOSE) {
-            if (!(OS_FIELD[Dev_constr[num][3]])) t_kog_wait=T_WAIT_PRESS;
+            if (!(MSK_FIELD[Dev_constr[num][3]])) t_kog_wait=T_WAIT_PRESS;
         }
         if(!sec_tik) if(t_kog_wait) t_kog_wait--;
         if(!(t_kog_wait)) stan|=KOG_STAN;
@@ -312,13 +312,16 @@
             LCD_abc((char*)auto_str,   12);//19
         }
 
+        if ((MSK_FIELD[/*Dev_constr[num][3]*/1])) LCD_abc((char*)one_str,11);
+        else LCD_abc((char*)noll_str,11);
+
         if (stan&(KOG_OS_ERROR|KOG_STAN)) {
             LCD_abc((char*)error_str,20);
             if (stan&KOG_OS_ERROR)     LCD_abc((char*)os_err_str,      34);
-            if (stan&KOG_STAN)   LCD_abc((char*)press_err_str,   23);//19
+            if (stan&KOG_STAN)   LCD_abc((char*)stan_err_str,   23);//19
         }
-//        LCD_uind(stad,28,2|LEAD_ZERO);
-//        LCD_uind(stan,31,2|LEAD_ZERO);
+        LCD_uind(stad,28,2|LEAD_ZERO);
+        LCD_uind(stan,31,2|LEAD_ZERO);
 //        LCD_uind(t_kog_wait,33,2|LEAD_ZERO);
 
         if (stan&KOG_OPER) {

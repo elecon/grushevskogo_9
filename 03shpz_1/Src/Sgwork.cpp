@@ -99,6 +99,12 @@ void all_ind()
 
     if (uiNetCounter<35) LED_FIELD[35]=green_lamp; else LED_FIELD[35]=red_lamp;
 
+    if ((MSK_FIELD[0])) LED_FIELD[32]=green_lamp;
+    else LED_FIELD[32]=red_lamp;
+
+    if ((kTTTTEST)) LED_FIELD[24]=green_lamp;
+    else LED_FIELD[24]=red_lamp;
+
 	if(WaitWhenIronIsReady) return;
 }
 

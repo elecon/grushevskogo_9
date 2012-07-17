@@ -298,7 +298,7 @@
 
 
 
-
+    #define kTTTTEST            MSK_FIELD[0+0*32]
 
     #define kKNOP_FLOORE_1__1   MSK_FIELD[1+0*32]
     #define kKNOP_FLOORE_1__2   MSK_FIELD[2+0*32]

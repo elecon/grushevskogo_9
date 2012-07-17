@@ -7,7 +7,7 @@
 #include <avr/delay.h>
 #include "Nls.h"
 
-#define NUM_OF_DEVS 2
+#define NUM_OF_DEVS 5
 
 extern NET_OUTPUT_STRUCT1 data_from_slave1;
 extern NET_INPUT_STRUCT1 data_for_slave1;
@@ -91,13 +91,13 @@ const uint16_t Dev_constr_info[]={
 };
 const uint8_t Dev_constr[][6]={
 //  led     MT      OS      dP      mp      ktr
-    32  ,   36  ,  36   ,   0   ,   0   ,   0   ,
-    32  ,   1   ,   1   ,   0   ,   0   ,   0   ,
-    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
-    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
-    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    40  ,   0   ,   36  ,   0   ,   0   ,   0   ,
+    41  ,   1   ,   1   ,   1   ,   1   ,   0   ,
+    42  ,   2   ,   36  ,   2   ,   2   ,   0   ,
+    44  ,   3   ,   36  ,   3   ,   3   ,   0   ,
+    45  ,   4   ,   36  ,   4   ,   4   ,   0   ,
 //5 led     MT      OS      dP      mp      ktr
-    32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
+    61  ,   5   ,   36  ,   0   ,   0   ,   0   ,
     32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
     32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
     32  ,   36  ,   36  ,   0   ,   0   ,   0   ,
@@ -250,11 +250,11 @@ const prog_char dev_name_str[][5]=
 {
 	"Ãð1",
 	"Ãð2",
-	"Ãð1",
-	"Ãð1",
-	"Ãð1",
+	"Ãð3",
+	"Ãð4",
+	"Ãð5",
 //	5
-	"Ãð1",
+	"Ãð6",
 	"Ãð1",
 	"Ãð1",
 	"Ãð1",
@@ -423,4 +423,6 @@ void show_dev_set()
 	const prog_char oper_str[]          = "ÎÏÅÐ";
 	const prog_char vidk_str[]          = "Âiäê";
 	const prog_char zakr_str[]          = "Çàêð";
+	const prog_char noll_str[]          = "0";
+	const prog_char one_str[]          = "1";
 

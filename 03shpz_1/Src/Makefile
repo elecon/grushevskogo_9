@@ -15,6 +15,7 @@ FORMAT = ihex
 
 
 # Target file name (without extension).
+#DDEBUG = ddebug
 SCAFE_NAME = s03shpz_1
 #SCAFE_NAME = SHPZ_6
 #SCAFE_NAME = SHPZ_9
@@ -84,6 +85,9 @@ CDEFS += -D scmRTOS_SYSTIMER_NEST_INTS_ENABLE
 
 CPPDEFS = -D SCAFE_NAME=$(SCAFE_NAME)
 CPPDEFS += -D SCAFE_ADRESS=$(SCAFE_ADRESS)
+ifeq ($(DDEBUG),ddebug)
+CPPDEFS += -Dddebug
+endif
 ifeq ($(SCAFE_NAME),s03shpz_1)
 CPPDEFS += -Ds03shpz_1
 endif

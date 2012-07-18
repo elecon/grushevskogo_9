@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
 	<Workspace title="grushevskogo_9">
-		<Project filename="cshpz/cshpz.cbp" />
-		<Project filename="03shpz_1/03shpz_1.cbp" active="1" />
+		<Project filename="cshpz/cshpz.cbp" active="1" />
+		<Project filename="03shpz_1/03shpz_1.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

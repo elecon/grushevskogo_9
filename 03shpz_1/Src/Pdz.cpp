@@ -216,7 +216,6 @@ void Pdz1_stop()
    }
 }
 
-
 void Pdz1_work()
 {
 	switch(Pdz1.sub_st)

@@ -27,6 +27,10 @@
 	#define OPT_CHECK_OS	0x1000 //перевірка зворотнього звязку
 	extern uint8_t sec_tik;
 
+    extern const uint16_t Dev_constr_info[];
+	extern const uint8_t Dev_constr[][6];
+	extern const prog_char dev_name_str[][5] PROGMEM;
+
 	//typedef char[5] devMoeString;
 
 	//extern XZ moe;

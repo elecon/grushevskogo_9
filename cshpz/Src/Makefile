@@ -27,7 +27,7 @@ vpath %.cpp ../../Devs
 # List C source files here. (C dependencies are automatically generated.)
 OBJ = main.o OS_Kernel.o OS_Services.o Usrlib.o OS_Target_cpp.o OS_Target_asm.o \
 		Peripheral.o Uart.o Iic.o TechObj.o Devs.o Menu.o Pdz.o \
-		Test.o Sgwork.o Dev_VZK.o \
+		Test.o Sgwork.o \
 		Dev_kog.o \
 		SHPZ_02.o
 #		CSHPZ.o \

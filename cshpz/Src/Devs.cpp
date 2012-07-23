@@ -1,6 +1,7 @@
 #include "../../Devs/Dev_kog_t.h"
 #include "../../Devs/Dev_moe.h"
 #include "../../Devs/Dev_zov_t.h"
+#include "../../Devs/Dev_kog.h"
 #include <avr/delay.h>
 #include "Nls.h"
 
@@ -26,18 +27,53 @@ extern const prog_char dev_name_str[][5] PROGMEM;
 
 extern uint8_t scafe_net;
 
+const uint16_t Dev_constr_info[]={
+    OPT_CHECK_OS|OPT_CHECK_MP,
+
+};
+const uint8_t Dev_constr[][6]={
+//  led     MT      OS      dP      mp      ktr
+    40  ,   0   ,   36  ,   1   ,   1   ,   0   ,
+};
+//KOG( *name, *mn_os, enh_info,	*out, *press, *os, *mp, *ktr)
+
+
+////-------------------------------------------------------------------------------------------YA6
+//KOG Dev1						//клас місцевих пристроїв
+//	(dev_name_str[0],		//назва яка буде відображитися на LCD
+//	(uint8_t*)&mGR1,		//свытлодіод мнемосхеми
+//	OPT_CHECK_OS|OPT_CHECK_MP,//статус
+//	&OP_GR1,                //вихід МТ
+//	0,						//контроль стану перепаду тиску
+//	&OS_GR1,				//контроль стану зворотній зв'язок
+//	0,						//контроль стану магнітного пускача
+//	0);						//контроль стану теплового реле
+
+KogNum Dev1(0);
+
+
+TDevObject* pDevs_arr[]=
+{
+	&Dev1,
+
+};
+//extern const prog_char dev_name_str[][5] PROGMEM;
+//const prog_char dev_name_str[][5]=
+//{
+//	"Гр1",
+//};
 
 //KOG( *name, *mn_os, enh_info,	*out, *press, *os, *mp, *ktr)
 //-------------------------------------------------------------------------------------------YA6
-VZK GR3						//клас місцевих пристроїв
-	(dev_name_str[0],		//назва яка буде відображитися на LCD
-	(uint8_t*)&mGR1,		                //свытлодіод мнемосхеми
-	VZK_CHECK_OS,			//статус
-	&OP_GR1,              		//вихід МТ
-	0,						//контроль стану перепаду тиску
-	0,				        //контроль стану зворотній зв'язок
-	0,						//контроль стану магнітного пускача
-	0);						//контроль стану теплового реле
+//VZK GR3						//клас місцевих пристроїв
+//	(dev_name_str[0],		//назва яка буде відображитися на LCD
+//	(uint8_t*)&mGR1,		                //свытлодіод мнемосхеми
+//	VZK_CHECK_OS,			//статус
+//	&OP_GR1,              		//вихід МТ
+//	0,						//контроль стану перепаду тиску
+//	0,				        //контроль стану зворотній зв'язок
+//	0,						//контроль стану магнітного пускача
+//	0);						//контроль стану теплового реле
 
 
 //extern const prog_char dev_name_str[][5] PROGMEM;
